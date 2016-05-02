@@ -1,0 +1,18 @@
+web:
+  build: .
+  env_file: .env
+  links:
+    - "db:db"
+  volumes:
+    - .:/app
+  ports: 
+    - "3000:3000"
+  command: sh ./start.sh
+
+db:
+  image: "postgres:9.4.1"
+  ports:
+    - "5432:5432"
+  environment:
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: ''

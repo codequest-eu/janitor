@@ -1,0 +1,1335 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@2.15.0
+3 info using node@v0.12.13
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies loading dependencies from /app/package.json
+6 warn package.json @ No license field.
+7 verbose install where, deps [ '/app',
+7 verbose install   [ 'babel-brunch',
+7 verbose install     'brunch',
+7 verbose install     'clean-css-brunch',
+7 verbose install     'css-brunch',
+7 verbose install     'javascript-brunch',
+7 verbose install     'uglify-js-brunch',
+7 verbose install     'phoenix',
+7 verbose install     'phoenix_html' ] ]
+8 verbose install where, peers [ '/app', [] ]
+9 verbose installManyTop reading for lifecycle /app/package.json
+10 info preinstall @
+11 verbose readDependencies loading dependencies from /app/package.json
+12 silly cache add args [ 'clean-css-brunch@~1.8.0', null ]
+13 verbose cache add spec clean-css-brunch@~1.8.0
+14 silly cache add parsed spec { raw: 'clean-css-brunch@~1.8.0',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'clean-css-brunch',
+14 silly cache add   rawSpec: '~1.8.0',
+14 silly cache add   spec: '>=1.8.0 <1.9.0',
+14 silly cache add   type: 'range' }
+15 silly addNamed clean-css-brunch@>=1.8.0 <1.9.0
+16 verbose addNamed ">=1.8.0 <1.9.0" is a valid semver range for clean-css-brunch
+17 silly addNameRange { name: 'clean-css-brunch',
+17 silly addNameRange   range: '>=1.8.0 <1.9.0',
+17 silly addNameRange   hasData: false }
+18 silly mapToRegistry name clean-css-brunch
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry data { raw: 'clean-css-brunch',
+21 silly mapToRegistry   scope: null,
+21 silly mapToRegistry   name: 'clean-css-brunch',
+21 silly mapToRegistry   rawSpec: '',
+21 silly mapToRegistry   spec: 'latest',
+21 silly mapToRegistry   type: 'tag' }
+22 silly mapToRegistry uri https://registry.npmjs.org/clean-css-brunch
+23 verbose addNameRange registry:https://registry.npmjs.org/clean-css-brunch not in flight; fetching
+24 silly cache add args [ 'css-brunch@~1.7.0', null ]
+25 verbose cache add spec css-brunch@~1.7.0
+26 silly cache add parsed spec { raw: 'css-brunch@~1.7.0',
+26 silly cache add   scope: null,
+26 silly cache add   name: 'css-brunch',
+26 silly cache add   rawSpec: '~1.7.0',
+26 silly cache add   spec: '>=1.7.0 <1.8.0',
+26 silly cache add   type: 'range' }
+27 silly addNamed css-brunch@>=1.7.0 <1.8.0
+28 verbose addNamed ">=1.7.0 <1.8.0" is a valid semver range for css-brunch
+29 silly addNameRange { name: 'css-brunch', range: '>=1.7.0 <1.8.0', hasData: false }
+30 silly mapToRegistry name css-brunch
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry data { raw: 'css-brunch',
+33 silly mapToRegistry   scope: null,
+33 silly mapToRegistry   name: 'css-brunch',
+33 silly mapToRegistry   rawSpec: '',
+33 silly mapToRegistry   spec: 'latest',
+33 silly mapToRegistry   type: 'tag' }
+34 silly mapToRegistry uri https://registry.npmjs.org/css-brunch
+35 verbose addNameRange registry:https://registry.npmjs.org/css-brunch not in flight; fetching
+36 silly cache add args [ 'javascript-brunch@~1.8.0', null ]
+37 verbose cache add spec javascript-brunch@~1.8.0
+38 silly cache add parsed spec { raw: 'javascript-brunch@~1.8.0',
+38 silly cache add   scope: null,
+38 silly cache add   name: 'javascript-brunch',
+38 silly cache add   rawSpec: '~1.8.0',
+38 silly cache add   spec: '>=1.8.0 <1.9.0',
+38 silly cache add   type: 'range' }
+39 silly addNamed javascript-brunch@>=1.8.0 <1.9.0
+40 verbose addNamed ">=1.8.0 <1.9.0" is a valid semver range for javascript-brunch
+41 silly addNameRange { name: 'javascript-brunch',
+41 silly addNameRange   range: '>=1.8.0 <1.9.0',
+41 silly addNameRange   hasData: false }
+42 silly mapToRegistry name javascript-brunch
+43 silly mapToRegistry using default registry
+44 silly mapToRegistry registry https://registry.npmjs.org/
+45 silly mapToRegistry data { raw: 'javascript-brunch',
+45 silly mapToRegistry   scope: null,
+45 silly mapToRegistry   name: 'javascript-brunch',
+45 silly mapToRegistry   rawSpec: '',
+45 silly mapToRegistry   spec: 'latest',
+45 silly mapToRegistry   type: 'tag' }
+46 silly mapToRegistry uri https://registry.npmjs.org/javascript-brunch
+47 verbose addNameRange registry:https://registry.npmjs.org/javascript-brunch not in flight; fetching
+48 silly cache add args [ 'uglify-js-brunch@~1.7.0', null ]
+49 verbose cache add spec uglify-js-brunch@~1.7.0
+50 silly cache add parsed spec { raw: 'uglify-js-brunch@~1.7.0',
+50 silly cache add   scope: null,
+50 silly cache add   name: 'uglify-js-brunch',
+50 silly cache add   rawSpec: '~1.7.0',
+50 silly cache add   spec: '>=1.7.0 <1.8.0',
+50 silly cache add   type: 'range' }
+51 silly addNamed uglify-js-brunch@>=1.7.0 <1.8.0
+52 verbose addNamed ">=1.7.0 <1.8.0" is a valid semver range for uglify-js-brunch
+53 silly addNameRange { name: 'uglify-js-brunch',
+53 silly addNameRange   range: '>=1.7.0 <1.8.0',
+53 silly addNameRange   hasData: false }
+54 silly mapToRegistry name uglify-js-brunch
+55 silly mapToRegistry using default registry
+56 silly mapToRegistry registry https://registry.npmjs.org/
+57 silly mapToRegistry data { raw: 'uglify-js-brunch',
+57 silly mapToRegistry   scope: null,
+57 silly mapToRegistry   name: 'uglify-js-brunch',
+57 silly mapToRegistry   rawSpec: '',
+57 silly mapToRegistry   spec: 'latest',
+57 silly mapToRegistry   type: 'tag' }
+58 silly mapToRegistry uri https://registry.npmjs.org/uglify-js-brunch
+59 verbose addNameRange registry:https://registry.npmjs.org/uglify-js-brunch not in flight; fetching
+60 silly cache add args [ 'phoenix@file:deps/phoenix', null ]
+61 verbose cache add spec phoenix@file:deps/phoenix
+62 silly cache add args [ 'phoenix_html@file:deps/phoenix_html', null ]
+63 verbose cache add spec phoenix_html@file:deps/phoenix_html
+64 silly cache add args [ 'babel-brunch@~6.0.0', null ]
+65 verbose cache add spec babel-brunch@~6.0.0
+66 silly cache add parsed spec { raw: 'babel-brunch@~6.0.0',
+66 silly cache add   scope: null,
+66 silly cache add   name: 'babel-brunch',
+66 silly cache add   rawSpec: '~6.0.0',
+66 silly cache add   spec: '>=6.0.0 <6.1.0',
+66 silly cache add   type: 'range' }
+67 silly addNamed babel-brunch@>=6.0.0 <6.1.0
+68 verbose addNamed ">=6.0.0 <6.1.0" is a valid semver range for babel-brunch
+69 silly addNameRange { name: 'babel-brunch', range: '>=6.0.0 <6.1.0', hasData: false }
+70 silly mapToRegistry name babel-brunch
+71 silly mapToRegistry using default registry
+72 silly mapToRegistry registry https://registry.npmjs.org/
+73 silly mapToRegistry data { raw: 'babel-brunch',
+73 silly mapToRegistry   scope: null,
+73 silly mapToRegistry   name: 'babel-brunch',
+73 silly mapToRegistry   rawSpec: '',
+73 silly mapToRegistry   spec: 'latest',
+73 silly mapToRegistry   type: 'tag' }
+74 silly mapToRegistry uri https://registry.npmjs.org/babel-brunch
+75 verbose addNameRange registry:https://registry.npmjs.org/babel-brunch not in flight; fetching
+76 silly cache add args [ 'brunch@~2.1.3', null ]
+77 verbose cache add spec brunch@~2.1.3
+78 silly cache add parsed spec { raw: 'brunch@~2.1.3',
+78 silly cache add   scope: null,
+78 silly cache add   name: 'brunch',
+78 silly cache add   rawSpec: '~2.1.3',
+78 silly cache add   spec: '>=2.1.3 <2.2.0',
+78 silly cache add   type: 'range' }
+79 silly addNamed brunch@>=2.1.3 <2.2.0
+80 verbose addNamed ">=2.1.3 <2.2.0" is a valid semver range for brunch
+81 silly addNameRange { name: 'brunch', range: '>=2.1.3 <2.2.0', hasData: false }
+82 silly mapToRegistry name brunch
+83 silly mapToRegistry using default registry
+84 silly mapToRegistry registry https://registry.npmjs.org/
+85 silly mapToRegistry data { raw: 'brunch',
+85 silly mapToRegistry   scope: null,
+85 silly mapToRegistry   name: 'brunch',
+85 silly mapToRegistry   rawSpec: '',
+85 silly mapToRegistry   spec: 'latest',
+85 silly mapToRegistry   type: 'tag' }
+86 silly mapToRegistry uri https://registry.npmjs.org/brunch
+87 verbose addNameRange registry:https://registry.npmjs.org/brunch not in flight; fetching
+88 verbose request uri https://registry.npmjs.org/clean-css-brunch
+89 verbose request no auth needed
+90 info attempt registry request try #1 at 9:48:19 PM
+91 verbose request id fed21516c0857bcd
+92 http request GET https://registry.npmjs.org/clean-css-brunch
+93 verbose request uri https://registry.npmjs.org/css-brunch
+94 verbose request no auth needed
+95 info attempt registry request try #1 at 9:48:19 PM
+96 http request GET https://registry.npmjs.org/css-brunch
+97 verbose request uri https://registry.npmjs.org/javascript-brunch
+98 verbose request no auth needed
+99 info attempt registry request try #1 at 9:48:19 PM
+100 http request GET https://registry.npmjs.org/javascript-brunch
+101 verbose request uri https://registry.npmjs.org/uglify-js-brunch
+102 verbose request no auth needed
+103 info attempt registry request try #1 at 9:48:19 PM
+104 http request GET https://registry.npmjs.org/uglify-js-brunch
+105 verbose request uri https://registry.npmjs.org/babel-brunch
+106 verbose request no auth needed
+107 info attempt registry request try #1 at 9:48:19 PM
+108 http request GET https://registry.npmjs.org/babel-brunch
+109 verbose request uri https://registry.npmjs.org/brunch
+110 verbose request no auth needed
+111 info attempt registry request try #1 at 9:48:19 PM
+112 http request GET https://registry.npmjs.org/brunch
+113 silly cache add parsed spec { raw: 'phoenix@file:deps/phoenix',
+113 silly cache add   scope: null,
+113 silly cache add   name: 'phoenix',
+113 silly cache add   rawSpec: 'file:deps/phoenix',
+113 silly cache add   spec: '/app/deps/phoenix',
+113 silly cache add   type: 'directory' }
+114 silly cache add parsed spec { raw: 'phoenix_html@file:deps/phoenix_html',
+114 silly cache add   scope: null,
+114 silly cache add   name: 'phoenix_html',
+114 silly cache add   rawSpec: 'file:deps/phoenix_html',
+114 silly cache add   spec: '/app/deps/phoenix_html',
+114 silly cache add   type: 'directory' }
+115 verbose addLocalDirectory /root/.npm/phoenix/1.1.4/package.tgz not in flight; packing
+116 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+117 verbose addLocalDirectory /root/.npm/phoenix_html/2.5.0/package.tgz not in flight; packing
+118 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+119 verbose tar pack [ '/root/.npm/phoenix/1.1.4/package.tgz', '/app/deps/phoenix' ]
+120 verbose tarball /root/.npm/phoenix/1.1.4/package.tgz
+121 verbose folder /app/deps/phoenix
+122 info prepublish phoenix@1.1.4
+123 verbose tar pack [ '/root/.npm/phoenix_html/2.5.0/package.tgz',
+123 verbose tar pack   '/app/deps/phoenix_html' ]
+124 verbose tarball /root/.npm/phoenix_html/2.5.0/package.tgz
+125 verbose folder /app/deps/phoenix_html
+126 info prepublish phoenix_html@2.5.0
+127 verbose addLocalTarball adding from inside cache /root/.npm/phoenix_html/2.5.0/package.tgz
+128 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+129 silly cache afterAdd phoenix_html@2.5.0
+130 verbose afterAdd /root/.npm/phoenix_html/2.5.0/package/package.json not in flight; writing
+131 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+132 verbose afterAdd /root/.npm/phoenix_html/2.5.0/package/package.json written
+133 verbose addLocalTarball adding from inside cache /root/.npm/phoenix/1.1.4/package.tgz
+134 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+135 silly cache afterAdd phoenix@1.1.4
+136 verbose afterAdd /root/.npm/phoenix/1.1.4/package/package.json not in flight; writing
+137 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+138 verbose afterAdd /root/.npm/phoenix/1.1.4/package/package.json written
+139 http 200 https://registry.npmjs.org/javascript-brunch
+140 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+140 verbose headers   etag: '"29I869TOMAOKBX6F9X34ADN83"',
+140 verbose headers   'content-type': 'application/json',
+140 verbose headers   'content-encoding': 'gzip',
+140 verbose headers   'cache-control': 'max-age=300',
+140 verbose headers   'content-length': '3117',
+140 verbose headers   'accept-ranges': 'bytes',
+140 verbose headers   date: 'Mon, 02 May 2016 21:55:36 GMT',
+140 verbose headers   via: '1.1 varnish',
+140 verbose headers   age: '136',
+140 verbose headers   connection: 'keep-alive',
+140 verbose headers   'x-served-by': 'cache-fra1237-FRA',
+140 verbose headers   'x-cache': 'HIT',
+140 verbose headers   'x-cache-hits': '2',
+140 verbose headers   'x-timer': 'S1462226136.942525,VS0,VE0',
+140 verbose headers   vary: 'Accept-Encoding' }
+141 silly get cb [ 200,
+141 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+141 silly get     etag: '"29I869TOMAOKBX6F9X34ADN83"',
+141 silly get     'content-type': 'application/json',
+141 silly get     'content-encoding': 'gzip',
+141 silly get     'cache-control': 'max-age=300',
+141 silly get     'content-length': '3117',
+141 silly get     'accept-ranges': 'bytes',
+141 silly get     date: 'Mon, 02 May 2016 21:55:36 GMT',
+141 silly get     via: '1.1 varnish',
+141 silly get     age: '136',
+141 silly get     connection: 'keep-alive',
+141 silly get     'x-served-by': 'cache-fra1237-FRA',
+141 silly get     'x-cache': 'HIT',
+141 silly get     'x-cache-hits': '2',
+141 silly get     'x-timer': 'S1462226136.942525,VS0,VE0',
+141 silly get     vary: 'Accept-Encoding' } ]
+142 verbose get saving javascript-brunch to /root/.npm/registry.npmjs.org/javascript-brunch/.cache.json
+143 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+144 http 200 https://registry.npmjs.org/clean-css-brunch
+145 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+145 verbose headers   etag: '"5MPZPCMAI74IWZRADCMJFIHZW"',
+145 verbose headers   'content-type': 'application/json',
+145 verbose headers   'content-encoding': 'gzip',
+145 verbose headers   'cache-control': 'max-age=300',
+145 verbose headers   'content-length': '3523',
+145 verbose headers   'accept-ranges': 'bytes',
+145 verbose headers   date: 'Mon, 02 May 2016 21:55:36 GMT',
+145 verbose headers   via: '1.1 varnish',
+145 verbose headers   age: '136',
+145 verbose headers   connection: 'keep-alive',
+145 verbose headers   'x-served-by': 'cache-fra1235-FRA',
+145 verbose headers   'x-cache': 'HIT',
+145 verbose headers   'x-cache-hits': '1',
+145 verbose headers   'x-timer': 'S1462226136.954964,VS0,VE0',
+145 verbose headers   vary: 'Accept-Encoding' }
+146 silly get cb [ 200,
+146 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+146 silly get     etag: '"5MPZPCMAI74IWZRADCMJFIHZW"',
+146 silly get     'content-type': 'application/json',
+146 silly get     'content-encoding': 'gzip',
+146 silly get     'cache-control': 'max-age=300',
+146 silly get     'content-length': '3523',
+146 silly get     'accept-ranges': 'bytes',
+146 silly get     date: 'Mon, 02 May 2016 21:55:36 GMT',
+146 silly get     via: '1.1 varnish',
+146 silly get     age: '136',
+146 silly get     connection: 'keep-alive',
+146 silly get     'x-served-by': 'cache-fra1235-FRA',
+146 silly get     'x-cache': 'HIT',
+146 silly get     'x-cache-hits': '1',
+146 silly get     'x-timer': 'S1462226136.954964,VS0,VE0',
+146 silly get     vary: 'Accept-Encoding' } ]
+147 verbose get saving clean-css-brunch to /root/.npm/registry.npmjs.org/clean-css-brunch/.cache.json
+148 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+149 silly addNameRange number 2 { name: 'javascript-brunch',
+149 silly addNameRange   range: '>=1.8.0 <1.9.0',
+149 silly addNameRange   hasData: true }
+150 silly addNameRange versions [ 'javascript-brunch',
+150 silly addNameRange   [ '1.0.0',
+150 silly addNameRange     '1.1.0',
+150 silly addNameRange     '1.1.1',
+150 silly addNameRange     '1.3.0',
+150 silly addNameRange     '1.5.0',
+150 silly addNameRange     '1.5.1',
+150 silly addNameRange     '1.6.0',
+150 silly addNameRange     '1.7.0',
+150 silly addNameRange     '1.7.1',
+150 silly addNameRange     '1.8.0',
+150 silly addNameRange     '2.0.0' ] ]
+151 silly addNamed javascript-brunch@1.8.0
+152 verbose addNamed "1.8.0" is a plain semver version for javascript-brunch
+153 silly mapToRegistry name javascript-brunch
+154 silly mapToRegistry using default registry
+155 silly mapToRegistry registry https://registry.npmjs.org/
+156 silly mapToRegistry data { raw: 'javascript-brunch',
+156 silly mapToRegistry   scope: null,
+156 silly mapToRegistry   name: 'javascript-brunch',
+156 silly mapToRegistry   rawSpec: '',
+156 silly mapToRegistry   spec: 'latest',
+156 silly mapToRegistry   type: 'tag' }
+157 silly mapToRegistry uri https://registry.npmjs.org/javascript-brunch
+158 verbose addRemoteTarball https://registry.npmjs.org/javascript-brunch/-/javascript-brunch-1.8.0.tgz not in flight; adding
+159 verbose addRemoteTarball [ 'https://registry.npmjs.org/javascript-brunch/-/javascript-brunch-1.8.0.tgz',
+159 verbose addRemoteTarball   '9d01b681f9e4f66bbe51cc1dbb70325ef3d831a5' ]
+160 silly addNameRange number 2 { name: 'clean-css-brunch',
+160 silly addNameRange   range: '>=1.8.0 <1.9.0',
+160 silly addNameRange   hasData: true }
+161 silly addNameRange versions [ 'clean-css-brunch',
+161 silly addNameRange   [ '1.0.0',
+161 silly addNameRange     '1.1.0',
+161 silly addNameRange     '1.1.1',
+161 silly addNameRange     '1.3.0',
+161 silly addNameRange     '1.4.0',
+161 silly addNameRange     '1.5.0',
+161 silly addNameRange     '1.5.1',
+161 silly addNameRange     '1.6.0',
+161 silly addNameRange     '1.7.0',
+161 silly addNameRange     '1.7.1',
+161 silly addNameRange     '1.7.2',
+161 silly addNameRange     '1.8.0',
+161 silly addNameRange     '2.0.0' ] ]
+162 silly addNamed clean-css-brunch@1.8.0
+163 verbose addNamed "1.8.0" is a plain semver version for clean-css-brunch
+164 silly mapToRegistry name clean-css-brunch
+165 silly mapToRegistry using default registry
+166 silly mapToRegistry registry https://registry.npmjs.org/
+167 silly mapToRegistry data { raw: 'clean-css-brunch',
+167 silly mapToRegistry   scope: null,
+167 silly mapToRegistry   name: 'clean-css-brunch',
+167 silly mapToRegistry   rawSpec: '',
+167 silly mapToRegistry   spec: 'latest',
+167 silly mapToRegistry   type: 'tag' }
+168 silly mapToRegistry uri https://registry.npmjs.org/clean-css-brunch
+169 verbose addRemoteTarball https://registry.npmjs.org/clean-css-brunch/-/clean-css-brunch-1.8.0.tgz not in flight; adding
+170 verbose addRemoteTarball [ 'https://registry.npmjs.org/clean-css-brunch/-/clean-css-brunch-1.8.0.tgz',
+170 verbose addRemoteTarball   'efea5ac3e2a99d08155c6c14e1eef466757b0984' ]
+171 info retry fetch attempt 1 at 9:48:20 PM
+172 info attempt registry request try #1 at 9:48:20 PM
+173 http fetch GET https://registry.npmjs.org/javascript-brunch/-/javascript-brunch-1.8.0.tgz
+174 info retry fetch attempt 1 at 9:48:20 PM
+175 info attempt registry request try #1 at 9:48:20 PM
+176 http fetch GET https://registry.npmjs.org/clean-css-brunch/-/clean-css-brunch-1.8.0.tgz
+177 http 200 https://registry.npmjs.org/css-brunch
+178 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+178 verbose headers   etag: '"4YX2L1NJVSI2XGV2B6L7CKNYH"',
+178 verbose headers   'content-type': 'application/json',
+178 verbose headers   'cache-control': 'max-age=300',
+178 verbose headers   'content-length': '14183',
+178 verbose headers   'accept-ranges': 'bytes',
+178 verbose headers   date: 'Mon, 02 May 2016 21:55:36 GMT',
+178 verbose headers   via: '1.1 varnish',
+178 verbose headers   age: '136',
+178 verbose headers   connection: 'keep-alive',
+178 verbose headers   'x-served-by': 'cache-fra1241-FRA',
+178 verbose headers   'x-cache': 'HIT',
+178 verbose headers   'x-cache-hits': '1',
+178 verbose headers   'x-timer': 'S1462226136.956675,VS0,VE0',
+178 verbose headers   vary: 'Accept-Encoding' }
+179 silly get cb [ 200,
+179 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+179 silly get     etag: '"4YX2L1NJVSI2XGV2B6L7CKNYH"',
+179 silly get     'content-type': 'application/json',
+179 silly get     'cache-control': 'max-age=300',
+179 silly get     'content-length': '14183',
+179 silly get     'accept-ranges': 'bytes',
+179 silly get     date: 'Mon, 02 May 2016 21:55:36 GMT',
+179 silly get     via: '1.1 varnish',
+179 silly get     age: '136',
+179 silly get     connection: 'keep-alive',
+179 silly get     'x-served-by': 'cache-fra1241-FRA',
+179 silly get     'x-cache': 'HIT',
+179 silly get     'x-cache-hits': '1',
+179 silly get     'x-timer': 'S1462226136.956675,VS0,VE0',
+179 silly get     vary: 'Accept-Encoding' } ]
+180 verbose get saving css-brunch to /root/.npm/registry.npmjs.org/css-brunch/.cache.json
+181 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+182 http 200 https://registry.npmjs.org/uglify-js-brunch
+183 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+183 verbose headers   etag: '"13FU9J8Y5W216UTLU2ZRS4T4M"',
+183 verbose headers   'content-type': 'application/json',
+183 verbose headers   'cache-control': 'max-age=300',
+183 verbose headers   'content-length': '21510',
+183 verbose headers   'accept-ranges': 'bytes',
+183 verbose headers   date: 'Mon, 02 May 2016 21:55:36 GMT',
+183 verbose headers   via: '1.1 varnish',
+183 verbose headers   age: '137',
+183 verbose headers   connection: 'keep-alive',
+183 verbose headers   'x-served-by': 'cache-fra1237-FRA',
+183 verbose headers   'x-cache': 'HIT',
+183 verbose headers   'x-cache-hits': '1',
+183 verbose headers   'x-timer': 'S1462226136.956898,VS0,VE0',
+183 verbose headers   vary: 'Accept-Encoding' }
+184 silly get cb [ 200,
+184 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+184 silly get     etag: '"13FU9J8Y5W216UTLU2ZRS4T4M"',
+184 silly get     'content-type': 'application/json',
+184 silly get     'cache-control': 'max-age=300',
+184 silly get     'content-length': '21510',
+184 silly get     'accept-ranges': 'bytes',
+184 silly get     date: 'Mon, 02 May 2016 21:55:36 GMT',
+184 silly get     via: '1.1 varnish',
+184 silly get     age: '137',
+184 silly get     connection: 'keep-alive',
+184 silly get     'x-served-by': 'cache-fra1237-FRA',
+184 silly get     'x-cache': 'HIT',
+184 silly get     'x-cache-hits': '1',
+184 silly get     'x-timer': 'S1462226136.956898,VS0,VE0',
+184 silly get     vary: 'Accept-Encoding' } ]
+185 verbose get saving uglify-js-brunch to /root/.npm/registry.npmjs.org/uglify-js-brunch/.cache.json
+186 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+187 silly addNameRange number 2 { name: 'css-brunch', range: '>=1.7.0 <1.8.0', hasData: true }
+188 silly addNameRange versions [ 'css-brunch',
+188 silly addNameRange   [ '1.0.0',
+188 silly addNameRange     '1.1.0',
+188 silly addNameRange     '1.1.1',
+188 silly addNameRange     '1.3.0',
+188 silly addNameRange     '1.5.0',
+188 silly addNameRange     '1.5.1',
+188 silly addNameRange     '1.6.0',
+188 silly addNameRange     '1.7.0',
+188 silly addNameRange     '2.0.0',
+188 silly addNameRange     '2.6.0',
+188 silly addNameRange     '2.6.1' ] ]
+189 silly addNamed css-brunch@1.7.0
+190 verbose addNamed "1.7.0" is a plain semver version for css-brunch
+191 silly addNameRange number 2 { name: 'uglify-js-brunch',
+191 silly addNameRange   range: '>=1.7.0 <1.8.0',
+191 silly addNameRange   hasData: true }
+192 silly addNameRange versions [ 'uglify-js-brunch',
+192 silly addNameRange   [ '1.0.0',
+192 silly addNameRange     '1.1.0',
+192 silly addNameRange     '1.1.1',
+192 silly addNameRange     '1.3.0',
+192 silly addNameRange     '1.3.1',
+192 silly addNameRange     '1.5.0',
+192 silly addNameRange     '1.5.1',
+192 silly addNameRange     '1.7.0',
+192 silly addNameRange     '1.7.1',
+192 silly addNameRange     '1.7.2',
+192 silly addNameRange     '1.7.3',
+192 silly addNameRange     '1.7.4',
+192 silly addNameRange     '1.7.5',
+192 silly addNameRange     '1.7.6',
+192 silly addNameRange     '1.7.7',
+192 silly addNameRange     '1.7.8',
+192 silly addNameRange     '2.0.0',
+192 silly addNameRange     '2.0.1' ] ]
+193 silly addNamed uglify-js-brunch@1.7.8
+194 verbose addNamed "1.7.8" is a plain semver version for uglify-js-brunch
+195 silly mapToRegistry name css-brunch
+196 silly mapToRegistry using default registry
+197 silly mapToRegistry registry https://registry.npmjs.org/
+198 silly mapToRegistry data { raw: 'css-brunch',
+198 silly mapToRegistry   scope: null,
+198 silly mapToRegistry   name: 'css-brunch',
+198 silly mapToRegistry   rawSpec: '',
+198 silly mapToRegistry   spec: 'latest',
+198 silly mapToRegistry   type: 'tag' }
+199 silly mapToRegistry uri https://registry.npmjs.org/css-brunch
+200 verbose addRemoteTarball https://registry.npmjs.org/css-brunch/-/css-brunch-1.7.0.tgz not in flight; adding
+201 verbose addRemoteTarball [ 'https://registry.npmjs.org/css-brunch/-/css-brunch-1.7.0.tgz',
+201 verbose addRemoteTarball   '258c1b038a970840af0c6a8e5582f614050294da' ]
+202 silly mapToRegistry name uglify-js-brunch
+203 silly mapToRegistry using default registry
+204 silly mapToRegistry registry https://registry.npmjs.org/
+205 silly mapToRegistry data { raw: 'uglify-js-brunch',
+205 silly mapToRegistry   scope: null,
+205 silly mapToRegistry   name: 'uglify-js-brunch',
+205 silly mapToRegistry   rawSpec: '',
+205 silly mapToRegistry   spec: 'latest',
+205 silly mapToRegistry   type: 'tag' }
+206 silly mapToRegistry uri https://registry.npmjs.org/uglify-js-brunch
+207 verbose addRemoteTarball https://registry.npmjs.org/uglify-js-brunch/-/uglify-js-brunch-1.7.8.tgz not in flight; adding
+208 verbose addRemoteTarball [ 'https://registry.npmjs.org/uglify-js-brunch/-/uglify-js-brunch-1.7.8.tgz',
+208 verbose addRemoteTarball   'b36dffbcd19cfea27248d34797effef1ae9d3a62' ]
+209 info retry fetch attempt 1 at 9:48:20 PM
+210 info attempt registry request try #1 at 9:48:20 PM
+211 http fetch GET https://registry.npmjs.org/css-brunch/-/css-brunch-1.7.0.tgz
+212 info retry fetch attempt 1 at 9:48:20 PM
+213 info attempt registry request try #1 at 9:48:20 PM
+214 http fetch GET https://registry.npmjs.org/uglify-js-brunch/-/uglify-js-brunch-1.7.8.tgz
+215 http fetch 200 https://registry.npmjs.org/clean-css-brunch/-/clean-css-brunch-1.8.0.tgz
+216 http fetch 200 https://registry.npmjs.org/javascript-brunch/-/javascript-brunch-1.8.0.tgz
+217 silly fetchAndShaCheck shasum 9d01b681f9e4f66bbe51cc1dbb70325ef3d831a5
+218 silly fetchAndShaCheck shasum efea5ac3e2a99d08155c6c14e1eef466757b0984
+219 verbose addTmpTarball /tmp/npm-6-ad4ce35f/registry.npmjs.org/javascript-brunch/-/javascript-brunch-1.8.0.tgz not in flight; adding
+220 verbose addTmpTarball already have metadata; skipping unpack for javascript-brunch@1.8.0
+221 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+222 verbose addTmpTarball /tmp/npm-6-ad4ce35f/registry.npmjs.org/clean-css-brunch/-/clean-css-brunch-1.8.0.tgz not in flight; adding
+223 verbose addTmpTarball already have metadata; skipping unpack for clean-css-brunch@1.8.0
+224 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+225 silly cache afterAdd javascript-brunch@1.8.0
+226 verbose afterAdd /root/.npm/javascript-brunch/1.8.0/package/package.json not in flight; writing
+227 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+228 silly cache afterAdd clean-css-brunch@1.8.0
+229 verbose afterAdd /root/.npm/clean-css-brunch/1.8.0/package/package.json not in flight; writing
+230 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+231 verbose afterAdd /root/.npm/javascript-brunch/1.8.0/package/package.json written
+232 verbose afterAdd /root/.npm/clean-css-brunch/1.8.0/package/package.json written
+233 http fetch 200 https://registry.npmjs.org/uglify-js-brunch/-/uglify-js-brunch-1.7.8.tgz
+234 http fetch 200 https://registry.npmjs.org/css-brunch/-/css-brunch-1.7.0.tgz
+235 silly fetchAndShaCheck shasum 258c1b038a970840af0c6a8e5582f614050294da
+236 silly fetchAndShaCheck shasum b36dffbcd19cfea27248d34797effef1ae9d3a62
+237 verbose addTmpTarball /tmp/npm-6-ad4ce35f/registry.npmjs.org/css-brunch/-/css-brunch-1.7.0.tgz not in flight; adding
+238 verbose addTmpTarball already have metadata; skipping unpack for css-brunch@1.7.0
+239 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+240 verbose addTmpTarball /tmp/npm-6-ad4ce35f/registry.npmjs.org/uglify-js-brunch/-/uglify-js-brunch-1.7.8.tgz not in flight; adding
+241 verbose addTmpTarball already have metadata; skipping unpack for uglify-js-brunch@1.7.8
+242 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+243 silly cache afterAdd css-brunch@1.7.0
+244 verbose afterAdd /root/.npm/css-brunch/1.7.0/package/package.json not in flight; writing
+245 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+246 silly cache afterAdd uglify-js-brunch@1.7.8
+247 verbose afterAdd /root/.npm/uglify-js-brunch/1.7.8/package/package.json not in flight; writing
+248 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+249 verbose afterAdd /root/.npm/css-brunch/1.7.0/package/package.json written
+250 verbose afterAdd /root/.npm/uglify-js-brunch/1.7.8/package/package.json written
+251 http 200 https://registry.npmjs.org/brunch
+252 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+252 verbose headers   etag: '"8RCINFVBIM4DEZQATK0U3PVHF"',
+252 verbose headers   'content-type': 'application/json',
+252 verbose headers   'cache-control': 'max-age=300',
+252 verbose headers   'content-length': '242315',
+252 verbose headers   'accept-ranges': 'bytes',
+252 verbose headers   date: 'Mon, 02 May 2016 21:55:37 GMT',
+252 verbose headers   via: '1.1 varnish',
+252 verbose headers   age: '0',
+252 verbose headers   connection: 'keep-alive',
+252 verbose headers   'x-served-by': 'cache-fra1227-FRA',
+252 verbose headers   'x-cache': 'HIT',
+252 verbose headers   'x-cache-hits': '1',
+252 verbose headers   'x-timer': 'S1462226136.956216,VS0,VE111',
+252 verbose headers   vary: 'Accept-Encoding' }
+253 silly get cb [ 200,
+253 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+253 silly get     etag: '"8RCINFVBIM4DEZQATK0U3PVHF"',
+253 silly get     'content-type': 'application/json',
+253 silly get     'cache-control': 'max-age=300',
+253 silly get     'content-length': '242315',
+253 silly get     'accept-ranges': 'bytes',
+253 silly get     date: 'Mon, 02 May 2016 21:55:37 GMT',
+253 silly get     via: '1.1 varnish',
+253 silly get     age: '0',
+253 silly get     connection: 'keep-alive',
+253 silly get     'x-served-by': 'cache-fra1227-FRA',
+253 silly get     'x-cache': 'HIT',
+253 silly get     'x-cache-hits': '1',
+253 silly get     'x-timer': 'S1462226136.956216,VS0,VE111',
+253 silly get     vary: 'Accept-Encoding' } ]
+254 verbose get saving brunch to /root/.npm/registry.npmjs.org/brunch/.cache.json
+255 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+256 http 200 https://registry.npmjs.org/babel-brunch
+257 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+257 verbose headers   etag: '"EGCK22FD2JMXMKJOSGDBZBQP7"',
+257 verbose headers   'content-type': 'application/json',
+257 verbose headers   'content-encoding': 'gzip',
+257 verbose headers   'cache-control': 'max-age=300',
+257 verbose headers   'content-length': '3408',
+257 verbose headers   'accept-ranges': 'bytes',
+257 verbose headers   date: 'Mon, 02 May 2016 21:55:37 GMT',
+257 verbose headers   via: '1.1 varnish',
+257 verbose headers   age: '0',
+257 verbose headers   connection: 'keep-alive',
+257 verbose headers   'x-served-by': 'cache-fra1245-FRA',
+257 verbose headers   'x-cache': 'HIT',
+257 verbose headers   'x-cache-hits': '1',
+257 verbose headers   'x-timer': 'S1462226136.956560,VS0,VE423',
+257 verbose headers   vary: 'Accept-Encoding' }
+258 silly get cb [ 200,
+258 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+258 silly get     etag: '"EGCK22FD2JMXMKJOSGDBZBQP7"',
+258 silly get     'content-type': 'application/json',
+258 silly get     'content-encoding': 'gzip',
+258 silly get     'cache-control': 'max-age=300',
+258 silly get     'content-length': '3408',
+258 silly get     'accept-ranges': 'bytes',
+258 silly get     date: 'Mon, 02 May 2016 21:55:37 GMT',
+258 silly get     via: '1.1 varnish',
+258 silly get     age: '0',
+258 silly get     connection: 'keep-alive',
+258 silly get     'x-served-by': 'cache-fra1245-FRA',
+258 silly get     'x-cache': 'HIT',
+258 silly get     'x-cache-hits': '1',
+258 silly get     'x-timer': 'S1462226136.956560,VS0,VE423',
+258 silly get     vary: 'Accept-Encoding' } ]
+259 verbose get saving babel-brunch to /root/.npm/registry.npmjs.org/babel-brunch/.cache.json
+260 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+261 silly addNameRange number 2 { name: 'brunch', range: '>=2.1.3 <2.2.0', hasData: true }
+262 silly addNameRange versions [ 'brunch',
+262 silly addNameRange   [ '0.0.1',
+262 silly addNameRange     '0.0.2',
+262 silly addNameRange     '0.0.3',
+262 silly addNameRange     '0.0.4',
+262 silly addNameRange     '0.0.5',
+262 silly addNameRange     '0.0.6',
+262 silly addNameRange     '0.0.7',
+262 silly addNameRange     '0.0.8',
+262 silly addNameRange     '0.1.0',
+262 silly addNameRange     '0.1.1',
+262 silly addNameRange     '0.1.3',
+262 silly addNameRange     '0.1.4',
+262 silly addNameRange     '0.1.5',
+262 silly addNameRange     '0.1.6',
+262 silly addNameRange     '0.1.7',
+262 silly addNameRange     '0.1.8',
+262 silly addNameRange     '0.1.9',
+262 silly addNameRange     '0.2.0',
+262 silly addNameRange     '0.2.1',
+262 silly addNameRange     '0.2.2',
+262 silly addNameRange     '0.2.3',
+262 silly addNameRange     '0.2.4',
+262 silly addNameRange     '0.2.6',
+262 silly addNameRange     '0.2.7',
+262 silly addNameRange     '0.2.8',
+262 silly addNameRange     '0.3.0',
+262 silly addNameRange     '0.3.1',
+262 silly addNameRange     '0.3.2',
+262 silly addNameRange     '0.3.4',
+262 silly addNameRange     '0.3.5',
+262 silly addNameRange     '0.3.6',
+262 silly addNameRange     '0.3.7',
+262 silly addNameRange     '0.4.0',
+262 silly addNameRange     '0.4.1',
+262 silly addNameRange     '0.4.2',
+262 silly addNameRange     '0.4.3',
+262 silly addNameRange     '0.4.4',
+262 silly addNameRange     '0.4.5',
+262 silly addNameRange     '0.5.1',
+262 silly addNameRange     '0.5.2',
+262 silly addNameRange     '0.5.3',
+262 silly addNameRange     '0.5.4',
+262 silly addNameRange     '0.5.5',
+262 silly addNameRange     '0.5.6',
+262 silly addNameRange     '0.6.0',
+262 silly addNameRange     '0.6.1',
+262 silly addNameRange     '0.6.2',
+262 silly addNameRange     '0.7.0',
+262 silly addNameRange     '0.7.1',
+262 silly addNameRange     '0.7.2',
+262 silly addNameRange     '0.7.3',
+262 silly addNameRange     '0.7.4',
+262 silly addNameRange     '0.8.0',
+262 silly addNameRange     '0.8.1',
+262 silly addNameRange     '0.9.0-beta1',
+262 silly addNameRange     '0.9.0',
+262 silly addNameRange     '0.9.1',
+262 silly addNameRange     '1.0.0',
+262 silly addNameRange     '1.0.1',
+262 silly addNameRange     '1.0.2',
+262 silly addNameRange     '1.0.3',
+262 silly addNameRange     '1.1.0',
+262 silly addNameRange     '1.1.1',
+262 silly addNameRange     '1.1.2',
+262 silly addNameRange     '1.2.0',
+262 silly addNameRange     '1.2.1',
+262 silly addNameRange     '1.2.2',
+262 silly addNameRange     '1.3.0',
+262 silly addNameRange     '1.3.1',
+262 silly addNameRange     '1.3.2',
+262 silly addNameRange     '1.3.3',
+262 silly addNameRange     '1.3.4',
+262 silly addNameRange     '1.4.0',
+262 silly addNameRange     '1.4.1',
+262 silly addNameRange     '1.4.2',
+262 silly addNameRange     '1.4.3',
+262 silly addNameRange     '1.4.4',
+262 silly addNameRange     '1.4.5',
+262 silly addNameRange     '1.5.0',
+262 silly addNameRange     '1.5.1',
+262 silly addNameRange     '1.5.2',
+262 silly addNameRange     '1.5.3',
+262 silly addNameRange     '1.5.4',
+262 silly addNameRange     '1.6.0',
+262 silly addNameRange     '1.6.1',
+262 silly addNameRange     '1.6.2',
+262 silly addNameRange     '1.6.3',
+262 silly addNameRange     '1.6.4',
+262 silly addNameRange     '1.6.5',
+262 silly addNameRange     '1.6.6',
+262 silly addNameRange     '1.6.7',
+262 silly addNameRange     '1.7.0',
+262 silly addNameRange     '1.7.1',
+262 silly addNameRange     '1.7.2',
+262 silly addNameRange     '1.7.3',
+262 silly addNameRange     '1.7.4',
+262 silly addNameRange     '1.7.5',
+262 silly addNameRange     '1.7.6',
+262 silly addNameRange     '1.7.7',
+262 silly addNameRange     '1.7.8',
+262 silly addNameRange     '1.7.9',
+262 silly addNameRange     '1.7.10',
+262 silly addNameRange     '1.7.12',
+262 silly addNameRange     '1.7.13',
+262 silly addNameRange     '1.7.14',
+262 silly addNameRange     '1.7.15',
+262 silly addNameRange     '1.7.16',
+262 silly addNameRange     '1.7.17',
+262 silly addNameRange     '1.7.18',
+262 silly addNameRange     '1.7.19',
+262 silly addNameRange     '1.7.20',
+262 silly addNameRange     '1.8.0',
+262 silly addNameRange     '1.8.1',
+262 silly addNameRange     '1.8.2',
+262 silly addNameRange     '1.8.3',
+262 silly addNameRange     '1.8.4',
+262 silly addNameRange     '1.8.5',
+262 silly addNameRange     '2.0.0',
+262 silly addNameRange     '2.0.1',
+262 silly addNameRange     '2.0.2',
+262 silly addNameRange     '2.0.3',
+262 silly addNameRange     '2.0.4',
+262 silly addNameRange     '2.1.0',
+262 silly addNameRange     '2.1.1',
+262 silly addNameRange     '2.1.2',
+262 silly addNameRange     '2.1.3',
+262 silly addNameRange     '2.2.0',
+262 silly addNameRange     '2.2.1',
+262 silly addNameRange     '2.2.2',
+262 silly addNameRange     '2.2.3',
+262 silly addNameRange     '2.3.0',
+262 silly addNameRange     '2.3.1',
+262 silly addNameRange     '2.3.2',
+262 silly addNameRange     '2.4.0',
+262 silly addNameRange     '2.4.1',
+262 silly addNameRange     '2.4.2',
+262 silly addNameRange     '2.5.0-pre',
+262 silly addNameRange     '2.5.0',
+262 silly addNameRange     '2.5.1',
+262 silly addNameRange     '2.5.2',
+262 silly addNameRange     '2.5.3',
+262 silly addNameRange     '2.6.0',
+262 silly addNameRange     '2.6.1',
+262 silly addNameRange     '2.6.2',
+262 silly addNameRange     '2.6.3',
+262 silly addNameRange     '2.6.4',
+262 silly addNameRange     '2.6.5',
+262 silly addNameRange     '2.6.6',
+262 silly addNameRange     '2.7.1',
+262 silly addNameRange     '2.7.2',
+262 silly addNameRange     '2.7.3',
+262 silly addNameRange     '2.7.4' ] ]
+263 silly addNamed brunch@2.1.3
+264 verbose addNamed "2.1.3" is a plain semver version for brunch
+265 silly mapToRegistry name brunch
+266 silly mapToRegistry using default registry
+267 silly mapToRegistry registry https://registry.npmjs.org/
+268 silly mapToRegistry data { raw: 'brunch',
+268 silly mapToRegistry   scope: null,
+268 silly mapToRegistry   name: 'brunch',
+268 silly mapToRegistry   rawSpec: '',
+268 silly mapToRegistry   spec: 'latest',
+268 silly mapToRegistry   type: 'tag' }
+269 silly mapToRegistry uri https://registry.npmjs.org/brunch
+270 verbose addRemoteTarball https://registry.npmjs.org/brunch/-/brunch-2.1.3.tgz not in flight; adding
+271 verbose addRemoteTarball [ 'https://registry.npmjs.org/brunch/-/brunch-2.1.3.tgz',
+271 verbose addRemoteTarball   'f695d23db6dd192e3d01a980fe57d5542a3d89d1' ]
+272 silly addNameRange number 2 { name: 'babel-brunch', range: '>=6.0.0 <6.1.0', hasData: true }
+273 silly addNameRange versions [ 'babel-brunch',
+273 silly addNameRange   [ '4.0.0',
+273 silly addNameRange     '5.0.0',
+273 silly addNameRange     '5.0.1',
+273 silly addNameRange     '5.1.0',
+273 silly addNameRange     '5.1.1',
+273 silly addNameRange     '5.1.2',
+273 silly addNameRange     '6.0.0',
+273 silly addNameRange     '6.0.1',
+273 silly addNameRange     '6.0.2',
+273 silly addNameRange     '6.0.3',
+273 silly addNameRange     '6.0.4' ] ]
+274 silly addNamed babel-brunch@6.0.4
+275 verbose addNamed "6.0.4" is a plain semver version for babel-brunch
+276 info retry fetch attempt 1 at 9:48:20 PM
+277 info attempt registry request try #1 at 9:48:20 PM
+278 http fetch GET https://registry.npmjs.org/brunch/-/brunch-2.1.3.tgz
+279 silly mapToRegistry name babel-brunch
+280 silly mapToRegistry using default registry
+281 silly mapToRegistry registry https://registry.npmjs.org/
+282 silly mapToRegistry data { raw: 'babel-brunch',
+282 silly mapToRegistry   scope: null,
+282 silly mapToRegistry   name: 'babel-brunch',
+282 silly mapToRegistry   rawSpec: '',
+282 silly mapToRegistry   spec: 'latest',
+282 silly mapToRegistry   type: 'tag' }
+283 silly mapToRegistry uri https://registry.npmjs.org/babel-brunch
+284 verbose addRemoteTarball https://registry.npmjs.org/babel-brunch/-/babel-brunch-6.0.4.tgz not in flight; adding
+285 verbose addRemoteTarball [ 'https://registry.npmjs.org/babel-brunch/-/babel-brunch-6.0.4.tgz',
+285 verbose addRemoteTarball   '5e298b6f6c78e6a7a49e025b2ca9a8be5ed9181f' ]
+286 info retry fetch attempt 1 at 9:48:20 PM
+287 info attempt registry request try #1 at 9:48:20 PM
+288 http fetch GET https://registry.npmjs.org/babel-brunch/-/babel-brunch-6.0.4.tgz
+289 http fetch 200 https://registry.npmjs.org/babel-brunch/-/babel-brunch-6.0.4.tgz
+290 silly fetchAndShaCheck shasum 5e298b6f6c78e6a7a49e025b2ca9a8be5ed9181f
+291 verbose addTmpTarball /tmp/npm-6-ad4ce35f/registry.npmjs.org/babel-brunch/-/babel-brunch-6.0.4.tgz not in flight; adding
+292 verbose addTmpTarball already have metadata; skipping unpack for babel-brunch@6.0.4
+293 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+294 silly cache afterAdd babel-brunch@6.0.4
+295 verbose afterAdd /root/.npm/babel-brunch/6.0.4/package/package.json not in flight; writing
+296 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+297 verbose afterAdd /root/.npm/babel-brunch/6.0.4/package/package.json written
+298 http fetch 200 https://registry.npmjs.org/brunch/-/brunch-2.1.3.tgz
+299 silly fetchAndShaCheck shasum f695d23db6dd192e3d01a980fe57d5542a3d89d1
+300 verbose addTmpTarball /tmp/npm-6-ad4ce35f/registry.npmjs.org/brunch/-/brunch-2.1.3.tgz not in flight; adding
+301 verbose addTmpTarball already have metadata; skipping unpack for brunch@2.1.3
+302 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+303 silly cache afterAdd brunch@2.1.3
+304 verbose afterAdd /root/.npm/brunch/2.1.3/package/package.json not in flight; writing
+305 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+306 verbose afterAdd /root/.npm/brunch/2.1.3/package/package.json written
+307 silly install resolved [ { name: 'phoenix_html',
+307 silly install resolved     version: '2.5.0',
+307 silly install resolved     main: './priv/static/phoenix_html.js',
+307 silly install resolved     repository: {},
+307 silly install resolved     devDependencies:
+307 silly install resolved      { brunch: '^2.1.1',
+307 silly install resolved        'babel-brunch': '^6.0.0',
+307 silly install resolved        'uglify-js-brunch': '>= 1.0 < 1.8' },
+307 silly install resolved     files: [ 'LICENSE.md', 'package.json', 'priv/static/phoenix_html.js' ],
+307 silly install resolved     readme: '## Phoenix.HTML\n\nCollection of helpers to generate and manipulate HTML contents.\n\nAlthough this project was originally extracted from Phoenix,\nit does not depend on Phoenix and can be used with any Plug\napplication.\n\nSee the [docs](https://hexdocs.pm/phoenix_html/) for more information.\n\n### Building phoenix_html.js\n\n```bash\n$ npm install\n$ npm install -g brunch\n$ brunch watch\n```\n\n## License\n\nCopyright (c) 2014 Chris McCord\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+307 silly install resolved     readmeFilename: 'README.md',
+307 silly install resolved     description: 'Collection of helpers to generate and manipulate HTML contents.',
+307 silly install resolved     _id: 'phoenix_html@2.5.0',
+307 silly install resolved     scripts: {},
+307 silly install resolved     _shasum: '816a9e7dbe867161a0883c1350aae1040fae1ef1',
+307 silly install resolved     _from: 'deps/phoenix_html',
+307 silly install resolved     _resolved: 'file:deps/phoenix_html' },
+307 silly install resolved   { name: 'phoenix',
+307 silly install resolved     version: '1.1.4',
+307 silly install resolved     main: './priv/static/phoenix.js',
+307 silly install resolved     repository: {},
+307 silly install resolved     devDependencies:
+307 silly install resolved      { brunch: '^2.1.1',
+307 silly install resolved        'babel-brunch': '^6.0.0',
+307 silly install resolved        'uglify-js-brunch': '>= 1.0 < 1.8' },
+307 silly install resolved     files: [ 'LICENSE.md', 'package.json', 'priv/static/phoenix.js' ],
+307 silly install resolved     readme: '![phoenix logo](https://raw.githubusercontent.com/phoenixframework/phoenix/master/priv/static/phoenix.png)\n> ### Productive. Reliable. Fast.\n> A productive web framework that does not compromise speed and maintainability.\n\n[![Build Status](https://api.travis-ci.org/phoenixframework/phoenix.svg)](https://travis-ci.org/phoenixframework/phoenix)\n[![Inline docs](http://inch-ci.org/github/phoenixframework/phoenix.svg)](http://inch-ci.org/github/phoenixframework/phoenix)\n\n## Getting started\n\nSee the official site at http://www.phoenixframework.org/\n\n## Documentation\n\nAPI documentation is available at [http://hexdocs.pm/phoenix](http://hexdocs.pm/phoenix)\n\n## Contributing\n\nWe appreciate any contribution to Phoenix. Check our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and [CONTRIBUTING.md](CONTRIBUTING.md) guides for more information. We usually keep a list of features and bugs [in the issue tracker][4].\n\n### Running a Phoenix master project\n\n```bash\n$ cd installer\n$ mix phoenix.new path/to/your/project --dev\n```\n\nThe command above will create a new project using your current Phoenix checkout, thanks to the `--dev` flag.\n\nNote that `path/to/your/project` must be within the directory containing the Phoenix source code. This is so that a relative path can be used for the `:phoenix` dependency.\n\nThe command must be run from the `installer` directory. See the discussion in [PR 1224](https://github.com/phoenixframework/phoenix/pull/1224) for more information.\n\nIn order to test changes to the installer (the `phoenix.new` Mix task) itself, first remove any installed archive so that Mix will pick up the local source code.  This can be done with `mix archive.uninstall phoenix_new-#.#.#.ez` or by simply deleting the file, which is usually in `~/.mix/archives/`.\n\n### Building phoenix.js\n\n```bash\n$ npm install\n$ npm install -g brunch\n$ brunch watch\n```\n\n### Building docs from source\n\n```bash\n$ MIX_ENV=docs mix docs\n```\n\n## Important links\n\n* [#elixir-lang][1] on [Freenode][2] IRC\n* [elixir-lang slack channel][3]\n* [Issue tracker][4]\n* [phoenix-talk Mailing list (questions)][5]\n* [phoenix-core Mailing list (development)][6]\n* Privately disclose security vulnerabilities to phoenix-security@googlegroups.com\n\n  [1]: https://webchat.freenode.net/?channels=#elixir-lang\n  [2]: http://www.freenode.net/\n  [3]: https://elixir-slackin.herokuapp.com/\n  [4]: https://github.com/phoenixframework/phoenix/issues\n  [5]: http://groups.google.com/group/phoenix-talk\n  [6]: http://groups.google.com/group/phoenix-core\n\n## Copyright and License\n\nCopyright (c) 2014, Chris McCord.\n\nPhoenix source code is licensed under the [MIT License](LICENSE.md).\n',
+307 silly install resolved     readmeFilename: 'README.md',
+307 silly install resolved     description: '![phoenix logo](https://raw.githubusercontent.com/phoenixframework/phoenix/master/priv/static/phoenix.png) > ### Productive. Reliable. Fast. > A productive web framework that does not compromise speed and maintainability.',
+307 silly install resolved     _id: 'phoenix@1.1.4',
+307 silly install resolved     scripts: {},
+307 silly install resolved     _shasum: '631a58d55c46eb2f86804706c7b413db8f91f478',
+307 silly install resolved     _from: 'deps/phoenix',
+307 silly install resolved     _resolved: 'file:deps/phoenix' },
+307 silly install resolved   { name: 'javascript-brunch',
+307 silly install resolved     version: '1.8.0',
+307 silly install resolved     description: 'Adds JavaScript support to brunch.',
+307 silly install resolved     author: { name: 'Paul Miller', url: 'http://paulmillr.com/' },
+307 silly install resolved     homepage: 'https://github.com/brunch/javascript-brunch',
+307 silly install resolved     license: 'MIT',
+307 silly install resolved     repository:
+307 silly install resolved      { type: 'git',
+307 silly install resolved        url: 'git+ssh://git@github.com/brunch/javascript-brunch.git' },
+307 silly install resolved     scripts: { test: 'mocha' },
+307 silly install resolved     dependencies: { esprima: '^2.6.0' },
+307 silly install resolved     devDependencies: { chai: '^3.3.0', mocha: '^2.3.3' },
+307 silly install resolved     gitHead: '9dcf503eb5b19f60b96a992c587b0ade985d9324',
+307 silly install resolved     bugs: { url: 'https://github.com/brunch/javascript-brunch/issues' },
+307 silly install resolved     _id: 'javascript-brunch@1.8.0',
+307 silly install resolved     _shasum: '9d01b681f9e4f66bbe51cc1dbb70325ef3d831a5',
+307 silly install resolved     _from: 'javascript-brunch@>=1.8.0 <1.9.0',
+307 silly install resolved     _npmVersion: '2.14.2',
+307 silly install resolved     _nodeVersion: '4.0.0',
+307 silly install resolved     _npmUser: { name: 'es128', email: 'elan.shanker+npm@gmail.com' },
+307 silly install resolved     dist:
+307 silly install resolved      { shasum: '9d01b681f9e4f66bbe51cc1dbb70325ef3d831a5',
+307 silly install resolved        tarball: 'https://registry.npmjs.org/javascript-brunch/-/javascript-brunch-1.8.0.tgz' },
+307 silly install resolved     maintainers: [ [Object], [Object] ],
+307 silly install resolved     directories: {},
+307 silly install resolved     _resolved: 'https://registry.npmjs.org/javascript-brunch/-/javascript-brunch-1.8.0.tgz' },
+307 silly install resolved   { name: 'clean-css-brunch',
+307 silly install resolved     version: '1.8.0',
+307 silly install resolved     description: 'Adds CleanCSS support to brunch.',
+307 silly install resolved     author: { name: 'Paul Miller', url: 'http://paulmillr.com/' },
+307 silly install resolved     homepage: 'https://github.com/brunch/clean-css-brunch',
+307 silly install resolved     license: 'MIT',
+307 silly install resolved     repository:
+307 silly install resolved      { type: 'git',
+307 silly install resolved        url: 'git+ssh://git@github.com/brunch/clean-css-brunch.git' },
+307 silly install resolved     scripts: { test: 'mocha' },
+307 silly install resolved     dependencies: { 'clean-css': '^3.4.8' },
+307 silly install resolved     devDependencies: { chai: '^3.4.1', mocha: '^2.3.4' },
+307 silly install resolved     gitHead: 'd9fab608aec8f0fdfdee319d9f3c54b3c99eaeb3',
+307 silly install resolved     bugs: { url: 'https://github.com/brunch/clean-css-brunch/issues' },
+307 silly install resolved     _id: 'clean-css-brunch@1.8.0',
+307 silly install resolved     _shasum: 'efea5ac3e2a99d08155c6c14e1eef466757b0984',
+307 silly install resolved     _from: 'clean-css-brunch@>=1.8.0 <1.9.0',
+307 silly install resolved     _npmVersion: '3.3.6',
+307 silly install resolved     _nodeVersion: '5.0.0',
+307 silly install resolved     _npmUser: { name: 'es128', email: 'elan.shanker+npm@gmail.com' },
+307 silly install resolved     dist:
+307 silly install resolved      { shasum: 'efea5ac3e2a99d08155c6c14e1eef466757b0984',
+307 silly install resolved        tarball: 'https://registry.npmjs.org/clean-css-brunch/-/clean-css-brunch-1.8.0.tgz' },
+307 silly install resolved     maintainers: [ [Object], [Object] ],
+307 silly install resolved     directories: {},
+307 silly install resolved     _resolved: 'https://registry.npmjs.org/clean-css-brunch/-/clean-css-brunch-1.8.0.tgz' },
+307 silly install resolved   { name: 'css-brunch',
+307 silly install resolved     version: '1.7.0',
+307 silly install resolved     description: 'Adds CSS support to brunch.',
+307 silly install resolved     author: { name: 'Paul Miller', url: 'http://paulmillr.com/' },
+307 silly install resolved     homepage: 'https://github.com/brunch/css-brunch',
+307 silly install resolved     repository: { type: 'git', url: 'git@github.com:brunch/css-brunch.git' },
+307 silly install resolved     main: './lib/index',
+307 silly install resolved     scripts:
+307 silly install resolved      { prepublish: 'rm -rf lib && coffee --bare --output lib/ src/',
+307 silly install resolved        test: 'node_modules/.bin/mocha --require test/common.js' },
+307 silly install resolved     dependencies: {},
+307 silly install resolved     devDependencies: { mocha: '1.11.0', chai: '1.7.0' },
+307 silly install resolved     bugs: { url: 'https://github.com/brunch/css-brunch/issues' },
+307 silly install resolved     _id: 'css-brunch@1.7.0',
+307 silly install resolved     dist:
+307 silly install resolved      { shasum: '258c1b038a970840af0c6a8e5582f614050294da',
+307 silly install resolved        tarball: 'https://registry.npmjs.org/css-brunch/-/css-brunch-1.7.0.tgz' },
+307 silly install resolved     _from: 'css-brunch@>=1.7.0 <1.8.0',
+307 silly install resolved     _npmVersion: '1.3.8',
+307 silly install resolved     _npmUser: { name: 'es128', email: 'elan.shanker+npm@gmail.com' },
+307 silly install resolved     maintainers: [ [Object], [Object] ],
+307 silly install resolved     directories: {},
+307 silly install resolved     _shasum: '258c1b038a970840af0c6a8e5582f614050294da',
+307 silly install resolved     _resolved: 'https://registry.npmjs.org/css-brunch/-/css-brunch-1.7.0.tgz' },
+307 silly install resolved   { name: 'uglify-js-brunch',
+307 silly install resolved     version: '1.7.8',
+307 silly install resolved     description: 'Adds Uglify minifying support to brunch.',
+307 silly install resolved     author: { name: 'Paul Miller', url: 'http://paulmillr.com/' },
+307 silly install resolved     homepage: 'https://github.com/brunch/uglify-js-brunch',
+307 silly install resolved     keywords: [ 'brunchplugin', 'uglify', 'uglify-js', 'optimizer' ],
+307 silly install resolved     repository:
+307 silly install resolved      { type: 'git',
+307 silly install resolved        url: 'git@github.com:brunch/uglify-js-brunch.git' },
+307 silly install resolved     scripts: { test: 'mocha' },
+307 silly install resolved     dependencies: { 'uglify-js': '~2.4.7' },
+307 silly install resolved     devDependencies: { mocha: '~1.17.1', chai: '~1.9.0' },
+307 silly install resolved     gitHead: '87517472e29e372becd9659aac88d0c9451c3677',
+307 silly install resolved     bugs: { url: 'https://github.com/brunch/uglify-js-brunch/issues' },
+307 silly install resolved     _id: 'uglify-js-brunch@1.7.8',
+307 silly install resolved     _shasum: 'b36dffbcd19cfea27248d34797effef1ae9d3a62',
+307 silly install resolved     _from: 'uglify-js-brunch@>=1.7.0 <1.8.0',
+307 silly install resolved     _npmVersion: '2.7.3',
+307 silly install resolved     _nodeVersion: '1.6.2',
+307 silly install resolved     _npmUser: { name: 'es128', email: 'elan.shanker+npm@gmail.com' },
+307 silly install resolved     maintainers: [ [Object], [Object] ],
+307 silly install resolved     dist:
+307 silly install resolved      { shasum: 'b36dffbcd19cfea27248d34797effef1ae9d3a62',
+307 silly install resolved        tarball: 'https://registry.npmjs.org/uglify-js-brunch/-/uglify-js-brunch-1.7.8.tgz' },
+307 silly install resolved     directories: {},
+307 silly install resolved     _resolved: 'https://registry.npmjs.org/uglify-js-brunch/-/uglify-js-brunch-1.7.8.tgz' },
+307 silly install resolved   { name: 'babel-brunch',
+307 silly install resolved     version: '6.0.4',
+307 silly install resolved     description: 'Brunch plugin to turn ES6 code into vanilla ES5 with no runtime required.',
+307 silly install resolved     author: { name: 'Elan Shanker' },
+307 silly install resolved     homepage: 'https://github.com/babel/babel-brunch',
+307 silly install resolved     repository:
+307 silly install resolved      { type: 'git',
+307 silly install resolved        url: 'git+https://github.com/babel/babel-brunch.git' },
+307 silly install resolved     keywords:
+307 silly install resolved      [ 'babel',
+307 silly install resolved        'brunch',
+307 silly install resolved        'brunch-plugin',
+307 silly install resolved        'brunch-compiler',
+307 silly install resolved        'js',
+307 silly install resolved        'es6',
+307 silly install resolved        'es5',
+307 silly install resolved        '6to5' ],
+307 silly install resolved     scripts: { test: 'eslint index.js && mocha' },
+307 silly install resolved     files: [ 'index.js' ],
+307 silly install resolved     dependencies:
+307 silly install resolved      { 'babel-core': '^6.0.0',
+307 silly install resolved        anymatch: '^1.0.0',
+307 silly install resolved        'babel-preset-es2015': '^6.0.0' },
+307 silly install resolved     devDependencies:
+307 silly install resolved      { 'babel-plugin-transform-node-env-inline': '^6.1.18',
+307 silly install resolved        mocha: '^2.0.0',
+307 silly install resolved        eslint: '^2.0.0' },
+307 silly install resolved     gitHead: 'c3c231391147b4939a265810e8090b9d7d4f624d',
+307 silly install resolved     bugs: { url: 'https://github.com/babel/babel-brunch/issues' },
+307 silly install resolved     _id: 'babel-brunch@6.0.4',
+307 silly install resolved     _shasum: '5e298b6f6c78e6a7a49e025b2ca9a8be5ed9181f',
+307 silly install resolved     _from: 'babel-brunch@>=6.0.0 <6.1.0',
+307 silly install resolved     _npmVersion: '3.7.3',
+307 silly install resolved     _nodeVersion: '5.9.1',
+307 silly install resolved     _npmUser: { name: 'paulmillr', email: 'paul@paulmillr.com' },
+307 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+307 silly install resolved     dist:
+307 silly install resolved      { shasum: '5e298b6f6c78e6a7a49e025b2ca9a8be5ed9181f',
+307 silly install resolved        tarball: 'https://registry.npmjs.org/babel-brunch/-/babel-brunch-6.0.4.tgz' },
+307 silly install resolved     _npmOperationalInternal:
+307 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+307 silly install resolved        tmp: 'tmp/babel-brunch-6.0.4.tgz_1461680588606_0.6249497369863093' },
+307 silly install resolved     directories: {},
+307 silly install resolved     _resolved: 'https://registry.npmjs.org/babel-brunch/-/babel-brunch-6.0.4.tgz' },
+307 silly install resolved   { name: 'brunch',
+307 silly install resolved     description: 'A lightweight approach to building HTML5 applications with emphasis on elegance and simplicity',
+307 silly install resolved     version: '2.1.3',
+307 silly install resolved     keywords:
+307 silly install resolved      [ 'assembler',
+307 silly install resolved        'builder',
+307 silly install resolved        'stack',
+307 silly install resolved        'chaplin',
+307 silly install resolved        'backbone',
+307 silly install resolved        'ember',
+307 silly install resolved        'angular',
+307 silly install resolved        'html5' ],
+307 silly install resolved     homepage: 'http://brunch.io/',
+307 silly install resolved     author: { name: 'Brunch team', url: 'http://brunch.io' },
+307 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/brunch/brunch.git' },
+307 silly install resolved     bugs: { url: 'http://github.com/brunch/brunch/issues' },
+307 silly install resolved     license: 'MIT',
+307 silly install resolved     main: './lib/index',
+307 silly install resolved     bin: { brunch: './bin/brunch' },
+307 silly install resolved     scripts: { test: 'eslint lib test && mocha --compilers coffee:coffee-script/register --require test/common.js --colors' },
+307 silly install resolved     engines: { node: '>= 4.0' },
+307 silly install resolved     preferGlobal: true,
+307 silly install resolved     dependencies:
+307 silly install resolved      { anymatch: '~1.3.0',
+307 silly install resolved        anysort: '~1.0.0',
+307 silly install resolved        chokidar: '~1.4.0',
+307 silly install resolved        'coffee-script': '~1.10.0',
+307 silly install resolved        commander: '~2.9.0',
+307 silly install resolved        'commonjs-require-definition': '~0.2.0',
+307 silly install resolved        debug: '~2.2.0',
+307 silly install resolved        fcache: '~0.1.0',
+307 silly install resolved        'init-skeleton': '~0.7.0',
+307 silly install resolved        loggy: '~0.2.0',
+307 silly install resolved        mkdirp: '~0.5.0',
+307 silly install resolved        pushserve: '^1.0.0',
+307 silly install resolved        'quickly-copy-file': '~0.1.0',
+307 silly install resolved        'read-components': '~0.6.0',
+307 silly install resolved        'source-map': '~0.5.0',
+307 silly install resolved        charm: '1.0.0',
+307 silly install resolved        'async-each': '~0.1.6',
+307 silly install resolved        'browser-resolve': '~1.7.2',
+307 silly install resolved        detective: '~4.0.0' },
+307 silly install resolved     devDependencies:
+307 silly install resolved      { chai: '~3.4.1',
+307 silly install resolved        eslint: '^1.10.3',
+307 silly install resolved        express: '^4.13.0',
+307 silly install resolved        mocha: '~2.3.4',
+307 silly install resolved        rewire: '~2.5.0' },
+307 silly install resolved     gitHead: '0e1191b4e14ee17d24edc8815281cbe9067898af',
+307 silly install resolved     _id: 'brunch@2.1.3',
+307 silly install resolved     _shasum: 'f695d23db6dd192e3d01a980fe57d5542a3d89d1',
+307 silly install resolved     _from: 'brunch@>=2.1.3 <2.2.0',
+307 silly install resolved     _npmVersion: '3.3.12',
+307 silly install resolved     _nodeVersion: '5.3.0',
+307 silly install resolved     _npmUser: { name: 'paulmillr', email: 'paul@paulmillr.com' },
+307 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+307 silly install resolved     dist:
+307 silly install resolved      { shasum: 'f695d23db6dd192e3d01a980fe57d5542a3d89d1',
+307 silly install resolved        tarball: 'https://registry.npmjs.org/brunch/-/brunch-2.1.3.tgz' },
+307 silly install resolved     directories: {},
+307 silly install resolved     _resolved: 'https://registry.npmjs.org/brunch/-/brunch-2.1.3.tgz' } ]
+308 info install phoenix_html@2.5.0 into /app
+309 info install phoenix@1.1.4 into /app
+310 info install javascript-brunch@1.8.0 into /app
+311 info install clean-css-brunch@1.8.0 into /app
+312 info install css-brunch@1.7.0 into /app
+313 info install uglify-js-brunch@1.7.8 into /app
+314 info install babel-brunch@6.0.4 into /app
+315 info install brunch@2.1.3 into /app
+316 info installOne phoenix_html@2.5.0
+317 verbose installOne of phoenix_html to /app not in flight; installing
+318 verbose correctMkdir /root/.npm/_locks correctMkdir not in flight; initializing
+319 info installOne phoenix@1.1.4
+320 verbose installOne of phoenix to /app not in flight; installing
+321 verbose correctMkdir /root/.npm/_locks correctMkdir already in flight; waiting
+322 info installOne javascript-brunch@1.8.0
+323 verbose installOne of javascript-brunch to /app not in flight; installing
+324 verbose correctMkdir /root/.npm/_locks correctMkdir already in flight; waiting
+325 info installOne clean-css-brunch@1.8.0
+326 verbose installOne of clean-css-brunch to /app not in flight; installing
+327 verbose correctMkdir /root/.npm/_locks correctMkdir already in flight; waiting
+328 info installOne css-brunch@1.7.0
+329 verbose installOne of css-brunch to /app not in flight; installing
+330 verbose correctMkdir /root/.npm/_locks correctMkdir already in flight; waiting
+331 info installOne uglify-js-brunch@1.7.8
+332 verbose installOne of uglify-js-brunch to /app not in flight; installing
+333 verbose correctMkdir /root/.npm/_locks correctMkdir already in flight; waiting
+334 info installOne babel-brunch@6.0.4
+335 verbose installOne of babel-brunch to /app not in flight; installing
+336 verbose correctMkdir /root/.npm/_locks correctMkdir already in flight; waiting
+337 info installOne brunch@2.1.3
+338 verbose installOne of brunch to /app not in flight; installing
+339 verbose correctMkdir /root/.npm/_locks correctMkdir already in flight; waiting
+340 verbose lock using /root/.npm/_locks/phoenix-html-20459d09ac047ecd.lock for /app/node_modules/phoenix_html
+341 verbose lock using /root/.npm/_locks/phoenix-e5317937ec32c8a3.lock for /app/node_modules/phoenix
+342 verbose lock using /root/.npm/_locks/javascript-brunch-c238150161b6bf1b.lock for /app/node_modules/javascript-brunch
+343 verbose lock using /root/.npm/_locks/clean-css-brunch-550e221d9f882122.lock for /app/node_modules/clean-css-brunch
+344 verbose lock using /root/.npm/_locks/css-brunch-c239e1e094241f5a.lock for /app/node_modules/css-brunch
+345 verbose lock using /root/.npm/_locks/uglify-js-brunch-c5d751aed23ddd78.lock for /app/node_modules/uglify-js-brunch
+346 verbose lock using /root/.npm/_locks/babel-brunch-add39f7f9de0018e.lock for /app/node_modules/babel-brunch
+347 verbose lock using /root/.npm/_locks/brunch-1edcad1cac26b8bc.lock for /app/node_modules/brunch
+348 warn engine brunch@2.1.3: wanted: {"node":">= 4.0"} (current: {"node":"0.12.13","npm":"2.15.0"})
+349 silly install write writing phoenix_html 2.5.0 to /app/node_modules/phoenix_html
+350 silly install write writing phoenix 1.1.4 to /app/node_modules/phoenix
+351 silly install write writing javascript-brunch 1.8.0 to /app/node_modules/javascript-brunch
+352 silly install write writing clean-css-brunch 1.8.0 to /app/node_modules/clean-css-brunch
+353 silly install write writing css-brunch 1.7.0 to /app/node_modules/css-brunch
+354 silly install write writing uglify-js-brunch 1.7.8 to /app/node_modules/uglify-js-brunch
+355 silly install write writing babel-brunch 6.0.4 to /app/node_modules/babel-brunch
+356 silly install write writing brunch 2.1.3 to /app/node_modules/brunch
+357 verbose unbuild node_modules/phoenix_html
+358 verbose unbuild node_modules/phoenix
+359 verbose unbuild node_modules/javascript-brunch
+360 verbose unbuild node_modules/clean-css-brunch
+361 verbose unbuild node_modules/css-brunch
+362 verbose unbuild node_modules/uglify-js-brunch
+363 verbose unbuild node_modules/babel-brunch
+364 verbose unbuild node_modules/brunch
+365 silly gentlyRm /app/node_modules/phoenix_html is being purged from base /app
+366 verbose gentlyRm don't care about contents; nuking /app/node_modules/phoenix_html
+367 silly gentlyRm /app/node_modules/phoenix is being purged from base /app
+368 verbose gentlyRm don't care about contents; nuking /app/node_modules/phoenix
+369 silly gentlyRm /app/node_modules/javascript-brunch is being purged from base /app
+370 verbose gentlyRm don't care about contents; nuking /app/node_modules/javascript-brunch
+371 silly gentlyRm /app/node_modules/clean-css-brunch is being purged from base /app
+372 verbose gentlyRm don't care about contents; nuking /app/node_modules/clean-css-brunch
+373 silly gentlyRm /app/node_modules/css-brunch is being purged from base /app
+374 verbose gentlyRm don't care about contents; nuking /app/node_modules/css-brunch
+375 silly gentlyRm /app/node_modules/uglify-js-brunch is being purged from base /app
+376 verbose gentlyRm don't care about contents; nuking /app/node_modules/uglify-js-brunch
+377 silly gentlyRm /app/node_modules/babel-brunch is being purged from base /app
+378 verbose gentlyRm don't care about contents; nuking /app/node_modules/babel-brunch
+379 verbose tar unpack /root/.npm/phoenix_html/2.5.0/package.tgz
+380 verbose tar unpacking to /app/node_modules/phoenix_html
+381 silly gentlyRm /app/node_modules/phoenix_html is being purged
+382 verbose gentlyRm don't care about contents; nuking /app/node_modules/phoenix_html
+383 verbose tar unpack /root/.npm/phoenix/1.1.4/package.tgz
+384 verbose tar unpacking to /app/node_modules/phoenix
+385 silly gentlyRm /app/node_modules/phoenix is being purged
+386 verbose gentlyRm don't care about contents; nuking /app/node_modules/phoenix
+387 verbose tar unpack /root/.npm/javascript-brunch/1.8.0/package.tgz
+388 verbose tar unpacking to /app/node_modules/javascript-brunch
+389 silly gentlyRm /app/node_modules/javascript-brunch is being purged
+390 verbose gentlyRm don't care about contents; nuking /app/node_modules/javascript-brunch
+391 verbose tar unpack /root/.npm/clean-css-brunch/1.8.0/package.tgz
+392 verbose tar unpacking to /app/node_modules/clean-css-brunch
+393 silly gentlyRm /app/node_modules/clean-css-brunch is being purged
+394 verbose gentlyRm don't care about contents; nuking /app/node_modules/clean-css-brunch
+395 verbose tar unpack /root/.npm/css-brunch/1.7.0/package.tgz
+396 verbose tar unpacking to /app/node_modules/css-brunch
+397 silly gentlyRm /app/node_modules/css-brunch is being purged
+398 verbose gentlyRm don't care about contents; nuking /app/node_modules/css-brunch
+399 verbose tar unpack /root/.npm/uglify-js-brunch/1.7.8/package.tgz
+400 verbose tar unpacking to /app/node_modules/uglify-js-brunch
+401 silly gentlyRm /app/node_modules/uglify-js-brunch is being purged
+402 verbose gentlyRm don't care about contents; nuking /app/node_modules/uglify-js-brunch
+403 verbose tar unpack /root/.npm/babel-brunch/6.0.4/package.tgz
+404 verbose tar unpacking to /app/node_modules/babel-brunch
+405 silly gentlyRm /app/node_modules/babel-brunch is being purged
+406 verbose gentlyRm don't care about contents; nuking /app/node_modules/babel-brunch
+407 silly gentlyRm /app/node_modules/brunch is being purged from base /app
+408 verbose gentlyRm don't care about contents; nuking /app/node_modules/brunch
+409 silly gunzTarPerm modes [ '755', '644' ]
+410 silly gunzTarPerm modes [ '755', '644' ]
+411 silly gunzTarPerm modes [ '755', '644' ]
+412 silly gunzTarPerm modes [ '755', '644' ]
+413 silly gunzTarPerm modes [ '755', '644' ]
+414 silly gunzTarPerm modes [ '755', '644' ]
+415 silly gunzTarPerm modes [ '755', '644' ]
+416 verbose tar unpack /root/.npm/brunch/2.1.3/package.tgz
+417 verbose tar unpacking to /app/node_modules/brunch
+418 silly gentlyRm /app/node_modules/brunch is being purged
+419 verbose gentlyRm don't care about contents; nuking /app/node_modules/brunch
+420 silly gunzTarPerm modes [ '755', '644' ]
+421 silly gunzTarPerm extractEntry package.json
+422 silly gunzTarPerm extractEntry package.json
+423 silly gunzTarPerm extractEntry package.json
+424 silly gunzTarPerm extractEntry package.json
+425 silly gunzTarPerm extractEntry package.json
+426 silly gunzTarPerm extractEntry package.json
+427 silly gunzTarPerm extractEntry package.json
+428 silly gunzTarPerm extractEntry package.json
+429 silly gunzTarPerm extractEntry README.md
+430 silly gunzTarPerm extractEntry LICENSE
+431 silly gunzTarPerm extractEntry README.md
+432 silly gunzTarPerm extractEntry CHANGELOG.md
+433 silly gunzTarPerm extractEntry .npmignore
+434 silly gunzTarPerm extractEntry README.md
+435 silly gunzTarPerm extractEntry README.md
+436 silly gunzTarPerm extractEntry LICENSE
+437 silly gunzTarPerm extractEntry .npmignore
+438 silly gunzTarPerm extractEntry README.md
+439 silly gunzTarPerm extractEntry .npmignore
+440 silly gunzTarPerm extractEntry README.md
+441 silly gunzTarPerm extractEntry .npmignore
+442 silly gunzTarPerm extractEntry README.md
+443 silly gunzTarPerm extractEntry .npmignore
+444 silly gunzTarPerm extractEntry README.md
+445 error tar.unpack untar error /root/.npm/phoenix_html/2.5.0/package.tgz
+446 error tar.unpack untar error /root/.npm/phoenix/1.1.4/package.tgz
+447 verbose unlock done using /root/.npm/_locks/phoenix-html-20459d09ac047ecd.lock for /app/node_modules/phoenix_html
+448 error tar.unpack untar error /root/.npm/clean-css-brunch/1.8.0/package.tgz
+449 verbose unlock done using /root/.npm/_locks/phoenix-e5317937ec32c8a3.lock for /app/node_modules/phoenix
+450 error tar.unpack untar error /root/.npm/css-brunch/1.7.0/package.tgz
+451 error tar.unpack untar error /root/.npm/babel-brunch/6.0.4/package.tgz
+452 error tar.unpack untar error /root/.npm/javascript-brunch/1.8.0/package.tgz
+453 verbose unlock done using /root/.npm/_locks/clean-css-brunch-550e221d9f882122.lock for /app/node_modules/clean-css-brunch
+454 verbose unlock done using /root/.npm/_locks/css-brunch-c239e1e094241f5a.lock for /app/node_modules/css-brunch
+455 error tar.unpack untar error /root/.npm/uglify-js-brunch/1.7.8/package.tgz
+456 verbose unlock done using /root/.npm/_locks/babel-brunch-add39f7f9de0018e.lock for /app/node_modules/babel-brunch
+457 verbose unlock done using /root/.npm/_locks/javascript-brunch-c238150161b6bf1b.lock for /app/node_modules/javascript-brunch
+458 verbose unlock done using /root/.npm/_locks/uglify-js-brunch-c5d751aed23ddd78.lock for /app/node_modules/uglify-js-brunch
+459 error tar.unpack untar error /root/.npm/brunch/2.1.3/package.tgz
+460 verbose unlock done using /root/.npm/_locks/brunch-1edcad1cac26b8bc.lock for /app/node_modules/brunch
+461 verbose fstream_path /app/node_modules/phoenix_html/package.json
+462 verbose fstream_type File
+463 verbose fstream_class FileWriter
+464 verbose fstream_finish_call chown
+465 verbose stack Error: EPERM, chown '/app/node_modules/phoenix_html/package.json'
+465 verbose stack     at Error (native)
+466 verbose fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/writer.js:306:21
+466 verbose fstream_stack /usr/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+466 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+467 verbose cwd /app
+468 error Linux 4.1.13-boot2docker
+469 error argv "/usr/bin/node" "/usr/bin/npm" "install"
+470 error node v0.12.13
+471 error npm  v2.15.0
+472 error path /app/node_modules/phoenix_html/package.json
+473 error code EPERM
+474 error errno -1
+475 error Error: EPERM, chown '/app/node_modules/phoenix_html/package.json'
+475 error     at Error (native)
+475 error  { [Error: EPERM, chown '/app/node_modules/phoenix_html/package.json']
+475 error   errno: -1,
+475 error   code: 'EPERM',
+475 error   path: '/app/node_modules/phoenix_html/package.json',
+475 error   fstream_finish_call: 'chown',
+475 error   fstream_type: 'File',
+475 error   fstream_path: '/app/node_modules/phoenix_html/package.json',
+475 error   fstream_class: 'FileWriter',
+475 error   fstream_stack:
+475 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/writer.js:306:21',
+475 error      '/usr/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7',
+475 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+476 error Please try running this command again as root/Administrator.
+477 verbose exit [ -1, true ]
+478 verbose unbuild node_modules/phoenix_html
+479 info preuninstall phoenix_html@2.5.0
+480 info uninstall phoenix_html@2.5.0
+481 verbose unbuild rmStuff phoenix_html@2.5.0 from /app/node_modules
+482 info postuninstall phoenix_html@2.5.0
+483 silly gentlyRm /app/node_modules/phoenix_html is being purged from base /app
+484 verbose gentlyRm don't care about contents; nuking /app/node_modules/phoenix_html
+485 silly vacuum-fs purging /app/node_modules/phoenix_html
+486 silly vacuum-fs quitting because other entries in /app/node_modules
+487 verbose unbuild node_modules/phoenix
+488 info preuninstall phoenix@1.1.4
+489 info uninstall phoenix@1.1.4
+490 verbose unbuild rmStuff phoenix@1.1.4 from /app/node_modules
+491 info postuninstall phoenix@1.1.4
+492 silly gentlyRm /app/node_modules/phoenix is being purged from base /app
+493 verbose gentlyRm don't care about contents; nuking /app/node_modules/phoenix
+494 silly vacuum-fs purging /app/node_modules/phoenix
+495 silly vacuum-fs quitting because other entries in /app/node_modules
+496 verbose unbuild node_modules/clean-css-brunch
+497 info preuninstall clean-css-brunch@1.8.0
+498 info uninstall clean-css-brunch@1.8.0
+499 verbose unbuild rmStuff clean-css-brunch@1.8.0 from /app/node_modules
+500 info postuninstall clean-css-brunch@1.8.0
+501 silly gentlyRm /app/node_modules/clean-css-brunch is being purged from base /app
+502 verbose gentlyRm don't care about contents; nuking /app/node_modules/clean-css-brunch
+503 silly vacuum-fs purging /app/node_modules/clean-css-brunch
+504 silly vacuum-fs quitting because other entries in /app/node_modules
+505 verbose unbuild node_modules/css-brunch
+506 info preuninstall css-brunch@1.7.0
+507 info uninstall css-brunch@1.7.0
+508 verbose unbuild rmStuff css-brunch@1.7.0 from /app/node_modules
+509 info postuninstall css-brunch@1.7.0
+510 silly gentlyRm /app/node_modules/css-brunch is being purged from base /app
+511 verbose gentlyRm don't care about contents; nuking /app/node_modules/css-brunch
+512 silly vacuum-fs purging /app/node_modules/css-brunch
+513 silly vacuum-fs quitting because other entries in /app/node_modules
+514 verbose unbuild node_modules/babel-brunch
+515 info preuninstall babel-brunch@6.0.4
+516 info uninstall babel-brunch@6.0.4
+517 verbose unbuild rmStuff babel-brunch@6.0.4 from /app/node_modules
+518 info postuninstall babel-brunch@6.0.4
+519 silly gentlyRm /app/node_modules/babel-brunch is being purged from base /app
+520 verbose gentlyRm don't care about contents; nuking /app/node_modules/babel-brunch
+521 silly vacuum-fs purging /app/node_modules/babel-brunch
+522 silly vacuum-fs quitting because other entries in /app/node_modules
+523 verbose unbuild node_modules/javascript-brunch
+524 info preuninstall javascript-brunch@1.8.0
+525 info uninstall javascript-brunch@1.8.0
+526 verbose unbuild rmStuff javascript-brunch@1.8.0 from /app/node_modules
+527 info postuninstall javascript-brunch@1.8.0
+528 silly gentlyRm /app/node_modules/javascript-brunch is being purged from base /app
+529 verbose gentlyRm don't care about contents; nuking /app/node_modules/javascript-brunch
+530 silly vacuum-fs purging /app/node_modules/javascript-brunch
+531 silly vacuum-fs quitting because other entries in /app/node_modules
+532 verbose unbuild node_modules/uglify-js-brunch
+533 info preuninstall uglify-js-brunch@1.7.8
+534 info uninstall uglify-js-brunch@1.7.8
+535 verbose unbuild rmStuff uglify-js-brunch@1.7.8 from /app/node_modules
+536 info postuninstall uglify-js-brunch@1.7.8
+537 silly gentlyRm /app/node_modules/uglify-js-brunch is being purged from base /app
+538 verbose gentlyRm don't care about contents; nuking /app/node_modules/uglify-js-brunch
+539 silly vacuum-fs purging /app/node_modules/uglify-js-brunch
+540 silly vacuum-fs quitting because other entries in /app/node_modules
+541 verbose unbuild node_modules/brunch
+542 info preuninstall brunch@2.1.3
+543 info uninstall brunch@2.1.3
+544 verbose unbuild rmStuff brunch@2.1.3 from /app/node_modules
+545 silly gentlyRm /app/node_modules/.bin/brunch is being gently removed
+546 silly gentlyRm verifying /app is an npm working directory
+547 silly gentlyRm containing path /app is under npm's control, in /app
+548 silly gentlyRm deletion target /app/node_modules/.bin/brunch is under /app
+549 verbose gentlyRm vacuuming from /app/node_modules/.bin/brunch up to /app
+550 info postuninstall brunch@2.1.3
+551 silly gentlyRm /app/node_modules/brunch is being purged from base /app
+552 verbose gentlyRm don't care about contents; nuking /app/node_modules/brunch
+553 silly vacuum-fs purging /app/node_modules/brunch
+554 silly vacuum-fs removing /app/node_modules
+555 silly vacuum-fs finished vacuuming up to /app
