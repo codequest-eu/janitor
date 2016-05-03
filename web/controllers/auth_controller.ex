@@ -1,4 +1,4 @@
-require IEx
+# require IEx
 defmodule Janitor.AuthController do
   use Janitor.Web, :controller
   use OAuth2.Strategy
@@ -8,7 +8,7 @@ defmodule Janitor.AuthController do
   end
 
   def oauth(_conn, _params) do 
-    IEx.pry
+    # IEx.pry
   end 
 
   defp client do 

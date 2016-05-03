@@ -4,10 +4,10 @@ web:
   links:
     - "db:db"
   volumes:
-    - .:/app
+    - .:/janitor
   ports: 
     - "3000:3000"
-  command: sh ./start.sh
+  command: sh start.sh
 
 db:
   image: "postgres:9.4.1"

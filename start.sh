@@ -1,4 +1,3 @@
 #!/bin/sh
-npm install
-mix do deps.get, compile
-iex -S mix phoenix.server
+mix hex.info && 
+mix phoenix.server
