@@ -1,31 +1,25 @@
-# require IEx
+require IEx
 defmodule Janitor.AuthController do
   use Janitor.Web, :controller
-  use OAuth2.Strategy
 
   def connect(conn, _params) do
-    redirect conn, external: authorize_url!()
+    redirect conn, external: Google.authorize_url!(scope: "email profile")
   end
 
-  def oauth(_conn, _params) do 
-    # IEx.pry
+  def oauth(conn, %{"code" => code}) do 
+    t = token(code)
+    IO.inspect t
+    user = get_user!(t)
+    IEx.pry
+    redirect conn, external: "http://localhost:5080"
   end 
 
-  defp client do 
-    OAuth2.Client.new([
-      strategy: OAuth2.Strategy.AuthCode, #default
-      client_id: System.get_env("GOOGLE_CLIENT_ID"),
-      client_secret: System.get_env("GOOGLE_CLIENT_SECRET"),
-      site: "https://accounts.google.com",
-      authorize_url: "https://accounts.google.com/o/oauth2/auth",
-      redirect_uri: "http://localhost:4567/oauth",
-      token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
-    ])
-  end 
+  defp token(token_string) do
+     Google.get_token!(code: token_string)
+  end
 
-  defp authorize_url!(params \\ []) do
-    client()
-    |> put_param(:scope, "email profile")
-    |> OAuth2.Client.authorize_url!(params)
+  defp get_user!(token) do
+    user_url = "https://www.googleapis.com/plus/v3/people/me/openIdConnect"
+    OAuth2.AccessToken.get!(token, user_url)
   end
 end

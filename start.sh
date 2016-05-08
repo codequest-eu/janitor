@@ -1,3 +1,3 @@
 #!/bin/sh
 mix hex.info && 
-mix phoenix.server
+iex -S mix phoenix.server

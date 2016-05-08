@@ -4,3 +4,5 @@ RUN apt-get install -y postgresql-client
 
 RUN mkdir /janitor
 WORKDIR /janitor
+
+RUN npm install
