@@ -11,7 +11,7 @@ defmodule Google do
       site: "https://accounts.google.com",
       authorize_url: "https://accounts.google.com/o/oauth2/auth",
       redirect_uri: "http://localhost:3000/oauth",
-      token_credential_uri:  'https://www.googleapis.com/oauth2/token',
+      token_url: "https://www.googleapis.com/oauth2/v3/token",
     ])
   end
 
