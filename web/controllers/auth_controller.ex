@@ -7,8 +7,8 @@ defmodule Janitor.AuthController do
   end
 
   def oauth(conn, %{"code" => code}) do 
-    t = token(code)
-    user = get_user!(t)
+    user = token(code) |> get_user!
+    IEx.pry
     redirect conn, external: "http://localhost:5080"
   end 
 
