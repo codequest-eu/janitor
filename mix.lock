@@ -24,4 +24,5 @@
   "poolboy": {:hex, :poolboy, "1.5.1"},
   "postgrex": {:hex, :postgrex, "0.11.1"},
   "ranch": {:hex, :ranch, "1.2.1"},
+  "shouldi": {:hex, :shouldi, "0.3.0"},
   "ssl_verify_fun": {:hex, :ssl_verify_fun, "1.1.0"}}
