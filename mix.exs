@@ -10,7 +10,7 @@ defmodule Janitor.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      aliases: aliases,
-     deps: deps, 
+     deps: deps,
      preferred_cli_env: [espec: :test]]
   end
 
@@ -20,7 +20,7 @@ defmodule Janitor.Mixfile do
   def application do
     [mod: {Janitor, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :oauth2, :ex_machina]]
+                    :phoenix_ecto, :postgrex, :oauth2, :ex_machina, :timex]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,9 +38,12 @@ defmodule Janitor.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:oauth2, "~> 0.5"}, 
+     {:oauth2, "~> 0.5"},
      {:espec_phoenix, "~> 0.2.1", only: :test, app: false},
      {:ex_machina, "~> 1.0.0-beta.1", github: "thoughtbot/ex_machina"}
+     {:shouldi, "~> 0.3.0", only: :test}
+     {:joken, "~> 1.2.0"},
+     {:timex, "~> 2.1.4"}
     ]
   end
 
