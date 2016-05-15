@@ -43,7 +43,7 @@ defmodule Janitor.Mixfile do
      {:ex_machina, "~> 1.0.0-beta.1", github: "thoughtbot/ex_machina"}
      {:oauth2, "~> 0.5"},
      {:shouldi, "~> 0.3.0", only: :test},
-     {:joken, "~> 1.2.0"},
+     {:json_web_token, "~> 0.2"},
      {:timex, "~> 2.1.4"}
     ]
   end
