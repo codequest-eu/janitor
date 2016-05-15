@@ -16,8 +16,4 @@ defmodule Janitor.Router do
     get "/oauth", AuthController, :oauth
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Janitor do
-  #   pipe_through :api
-  # end
 end

@@ -1,5 +1,6 @@
 defmodule Janitor.User do
   use Janitor.Web, :model
+  alias Janitor.Repo
 
   schema "users" do
     field :first_name, :string
@@ -16,14 +17,16 @@ defmodule Janitor.User do
   end 
 
   def find_or_create(changeset) do 
-    Repo.get_by(User, google_id: changeset["google_id"]) |> on_find
+    Repo.get_by(__MODULE__, google_id: changeset.params["google_id"]) 
+    |> on_find(changeset)
   end 
 
-  defp on_find({:ok, user}) do 
+  defp on_find(nil, changeset) do 
+    {:ok, user} = Repo.insert(changeset)
     user
   end 
-
-  defp on_find({:error, changeset}) do 
-    {:ok, user} = Repo.insert(changeset)
+  
+  defp on_find(%__MODULE__{} = user, changeset) do
+    user
   end 
 end

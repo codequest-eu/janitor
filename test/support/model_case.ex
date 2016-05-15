@@ -22,8 +22,6 @@ defmodule Janitor.ModelCase do
       import Ecto.Changeset
       import Ecto.Query, only: [from: 1, from: 2]
       import Janitor.ModelCase
-      import Janitor.CustomMatchers
-      use ShouldI
     end
   end
 
