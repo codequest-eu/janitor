@@ -17,16 +17,16 @@ defmodule Janitor.User do
   end 
 
   def find_or_create(changeset) do 
-    Repo.get_by(__MODULE__, google_id: changeset.params["google_id"]) 
-    |> on_find(changeset)
+    user = Repo.get_by(__MODULE__, google_id: changeset.params["google_id"]) 
+    case user do 
+      nil -> create_user(changeset)
+      %__MODULE__{} -> user    
+    end
   end 
 
-  defp on_find(nil, changeset) do 
+  defp create_user(changeset) do 
     {:ok, user} = Repo.insert(changeset)
     user
   end 
   
-  defp on_find(%__MODULE__{} = user, changeset) do
-    user
-  end 
 end

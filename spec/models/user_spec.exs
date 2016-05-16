@@ -12,8 +12,6 @@ defmodule Janitor.UserSpec do
 
   describe "validation" do 
     context "valid changeset" do 
-      
-      
       it "set valid? to true" do 
         expect(changeset.valid?).to eq true
       end 
