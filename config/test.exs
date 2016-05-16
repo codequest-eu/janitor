@@ -9,12 +9,11 @@ config :janitor, Janitor.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
-# Configure your database
 config :janitor, Janitor.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   database: "janitor_test",
-  host:  System.get_env("JANITOR_DB_1_PORT_5432_TCP_ADDR"), 
+  hostname:  "db",
   port: System.get_env("JANITOR_DB_1_PORT_5432_TCP_PORT"),
-  pool_size: 10
+  pool_size: 10,
   pool: Ecto.Adapters.SQL.Sandbox

@@ -23,8 +23,6 @@ defmodule Google do
     OAuth2.Client.get_token!(client(), params, headers)
   end
 
-  # strategy callbacks
-
   def authorize_url(client, params) do
     AuthCode.authorize_url(client, params)
   end
