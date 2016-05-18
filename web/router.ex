@@ -1,7 +1,9 @@
-
+require IEx
 defmodule Janitor.Router do
   use Janitor.Web, :router
+  use Timex
   import Plug.Conn
+
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -9,7 +11,9 @@ defmodule Janitor.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    plug :authenticate_request
+    plug :verify_token
+    plug :check_expiration_time
+    plug :assign_current_user
   end
 
   scope "/", Janitor do
@@ -24,50 +28,42 @@ defmodule Janitor.Router do
     get "/test", TestController, :index
   end
 
-  def authenticate_request(conn, _) do
-    parse_token(conn)
-    |> verify_token(conn)
-    |> check_expiration_time(conn)
-    |> assign_current_user(conn)
+  def verify_token(conn, _) do
+    token = parse_token(conn)
+    case JsonWebToken.verify(token, %{key: System.get_env("JWT_SECRET")}) do
+      {:ok, claims} ->
+        conn = assign(conn, :claims, claims)
+      {:error, "invalid"} ->
+        unauthorized(conn) |> halt
+    end
   end
-
-  # PRIVATE
 
   defp parse_token(conn) do
     conn
     |> get_req_header("authorization")
-    |> List.first
-    |> String.split
-    |> tl |> List.first
+    |> List.first |> String.split |> tl |> List.first
   end
 
-  defp verify_token(token, conn) do
-    case JsonWebToken.verify(token, %{key: System.get_env("JWT_SECRET")}) do
-      {:ok, claims} ->
-        claims
-      {:error, "invalid"} ->
-        send_403(conn)
-    end
-  end
-
-  defp check_expiration_time(claims, conn) do
-    if DateTime.today > claims[:exp] do
-      send_403(conn)
+  def check_expiration_time(conn, _) do
+    claims = conn.assigns[:claims]
+    if Date.today > claims[:exp] do
+      unauthorized(conn) |> halt
     else
-      claims[:user_id]
+      conn
     end
   end
 
-  defp assign_current_user(user_id, conn) do
-    case Repo.get!(User, user_id) do
+  def assign_current_user(conn, _) do
+    claims = conn.assigns[:claims]
+    case Repo.get!(User, claims[:user_id]) do
       {:ok, user} ->
-        assign(conn, :current_user, user)
+        conn = assign(conn, :current_user, user)
       :error ->
-        send_403(conn)
+        unauthorized(conn) |> halt
     end
   end
 
-  defp send_403(conn) do
-    send_resp(conn, 403, "unauthorized") |> halt
+  defp unauthorized(conn) do
+    send_resp(conn, 403, "Unauthorized request")
   end
 end
