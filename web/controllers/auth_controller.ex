@@ -12,7 +12,7 @@ defmodule Janitor.AuthController do
     params = token(code) |> get_user! |> map_params
     changeset = User.registration_changeset(%User{}, params)
     token = User.find_or_create(changeset) |> sign_jwt_token
-    put_req_header(conn, "authorization", "bearer #{token}")
+    conn = put_req_header(conn, "authorization", "bearer #{token}")
     redirect conn, to: "/api/test"
   end
 
