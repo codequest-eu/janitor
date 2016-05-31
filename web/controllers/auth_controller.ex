@@ -12,8 +12,7 @@ defmodule Janitor.AuthController do
     params = token(code) |> get_user! |> map_params
     changeset = User.registration_changeset(%User{}, params)
     token = User.find_or_create(changeset) |> sign_jwt_token
-    conn = put_req_header(conn, "authorization", "bearer #{token}")
-    redirect conn, to: "/api/test"
+    redirect conn, to "localhost:5000?token=#{token}"
   end
 
   defp sign_jwt_token(user) do
@@ -29,10 +28,6 @@ defmodule Janitor.AuthController do
   defp get_user!(token) do
     user_url = "https://www.googleapis.com/plus/v1/people/me"
     OAuth2.AccessToken.get!(token, user_url)
-  end
-
-  defp find_or_create(changeset) do
-    Repo.get_by(User, google_id: changeset["google_id"])
   end
 
   defp map_params(data) do

@@ -1,5 +1,5 @@
 require IEx
-defmodule Janitor.Plugs.JWTVerifier do
+defmodule Janitor.Plugs.UserAuthorizer do
   use Timex
   import Plug.Conn
 
@@ -7,19 +7,29 @@ defmodule Janitor.Plugs.JWTVerifier do
   end
 
   def call(conn, _) do
-    case verification_chain(conn) do
-      {:ok, conn} -> conn
-      {:error, message} -> send_resp(conn, 403, message) |> Plug.Conn.halt
-    end
+    conn
+    |> run_unless_error(&verify_token/1)
+    |> run_unless_error(&check_expiration_time/1)
+    |> run_unless_error(&assign_current_user/1)
+    |> end_processing
   end
 
   #PRIVATE
 
-  defp verification_chain(conn) do
-    with {:ok, conn} <- verify_token(conn),
-      {:ok, conn} <- check_expiration_time(conn),
-      {:ok, conn} <- assign_current_user(conn),
-    do: {:ok, conn}
+  defp end_processing(conn) do
+    if conn.assigns[:auth_error] do
+      send_resp(conn, 403, conn.assigns[:auth_error]) |> Plug.Conn.halt
+    else
+      conn
+    end
+  end
+
+  defp run_unless_error(conn, func) do
+    if conn.assigns[:auth_error] do
+      conn
+    else
+      func.(conn)
+    end
   end
 
   defp verify_token(conn) do
@@ -28,14 +38,14 @@ defmodule Janitor.Plugs.JWTVerifier do
       {:ok, claims} ->
         conn = assign(conn, :claims, claims)
       {:error, "invalid"} ->
-        {:error, "Unauthorized request"}
+        conn = assign(conn, :auth_error, "Unauthorized request")
     end
   end
 
   defp check_expiration_time(conn) do
     claims = conn.assigns[:claims]
     if Date.today > claims[:exp] do
-      {:error, "Unauthorized request"}
+      conn = assign(conn, :auth_error, "Unauthorized request")
     else
       conn
     end
@@ -47,7 +57,7 @@ defmodule Janitor.Plugs.JWTVerifier do
       {:ok, user} ->
         conn = assign(conn, :current_user, user)
       :error ->
-        {:error, "Unauthorized request"}
+        conn = assign(conn, :auth_error, "Unauthorized request")
     end
   end
 
