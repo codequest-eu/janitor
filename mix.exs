@@ -40,7 +40,7 @@ defmodule Janitor.Mixfile do
      {:cowboy, "~> 1.0"},
      {:oauth2, "~> 0.5"},
      {:espec_phoenix, "~> 0.2.1", only: :test, app: false},
-     {:ex_machina, "~> 1.0.0-beta.1", github: "thoughtbot/ex_machina"}
+     {:ex_machina, "~> 1.0.0-beta.1", github: "thoughtbot/ex_machina"},
      {:oauth2, "~> 0.5"},
      {:shouldi, "~> 0.3.0", only: :test},
      {:json_web_token, "~> 0.2"},

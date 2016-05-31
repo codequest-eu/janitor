@@ -7,7 +7,7 @@ defmodule Janitor.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    plug Janitor.Plugs.JWTVerifier
+    plug Janitor.Plugs.UserAuthorizer
   end
 
   scope "/", Janitor do
