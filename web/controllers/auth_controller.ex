@@ -4,7 +4,7 @@ defmodule Janitor.AuthController do
   import Janitor.DBHelpers
   alias Janitor.User
   alias Janitor.Google
-  
+
   def connect(conn, _params) do
     redirect conn, external: Google.authorize_url!(scope: "email profile")
   end
