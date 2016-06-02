@@ -7,13 +7,18 @@ defmodule Janitor.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug Janitor.Plugs.UserAuthorizer
   end
 
   scope "/", Janitor do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/connect", AuthController, :connect
     get "/oauth", AuthController, :oauth
   end
 
+  scope "/api", Janitor do
+    pipe_through :api
+    get "/test", TestController, :index
+  end
 end
