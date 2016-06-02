@@ -1,4 +1,3 @@
-require IEx
 defmodule Janitor.AuthController do
   use Janitor.Web, :controller
   use Timex
