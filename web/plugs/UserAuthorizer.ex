@@ -1,4 +1,3 @@
-require IEx
 defmodule Janitor.Plugs.UserAuthorizer do
   use Timex
   import Plug.Conn
