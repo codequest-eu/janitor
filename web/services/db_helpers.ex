@@ -5,8 +5,8 @@ defmodule Janitor.DBHelpers do
     get_by_map = Map.take(changeset.params, [param])
     entity = Repo.get_by(structName, get_by_map)
     case entity do 
-      nil -> create(changeset)
-      _ -> entity    
+      nil -> Repo.insert(changeset)
+      _ -> {:ok, entity }
     end
   end 
 
@@ -14,5 +14,4 @@ defmodule Janitor.DBHelpers do
     {:ok, entity} = Repo.insert(changeset)
     entity
   end 
-
 end 

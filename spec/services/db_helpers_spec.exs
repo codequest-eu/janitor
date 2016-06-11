@@ -22,7 +22,8 @@ defmodule Janitor.DBHelpersSpec do
       end 
 
       it "returns new user" do
-        expect(subject.id).to_not eq nil
+        {:ok, user} = subject
+        expect(user.id).to_not eq nil
       end 
     end 
 
@@ -31,7 +32,8 @@ defmodule Janitor.DBHelpersSpec do
       let! :user, do: DBHelpers.find_or_create_by(User, changeset, :google_id)
 
       it "returns the user" do
-        expect(subject.id).to eq user.id
+        {:ok, user} = subject
+        expect(user.id).to eq user.id
       end 
 
       it "does not change count of objects" do 
