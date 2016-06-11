@@ -1,8 +1,9 @@
 defmodule Janitor.AuthController do
+  import Janitor.DBHelpers
   use Janitor.Web, :controller
   use Timex
   alias Janitor.User
-
+  
   def connect(conn, _params) do
     redirect conn, external: Google.authorize_url!(scope: "email profile")
   end
@@ -10,11 +11,11 @@ defmodule Janitor.AuthController do
   def oauth(conn, %{"code" => code}) do
     params = token(code) |> get_user! |> map_params
     changeset = User.registration_changeset(%User{}, params)
-    token = User.find_or_create(changeset) |> sign_jwt_token
-    redirect conn, to "localhost:5000?token=#{token}"
+    token = find_or_create_by(User, changeset, :google_id) |> sign_jwt_token
+    redirect conn, to: "localhost:5000?token=#{token}"
   end
 
-  defp sign_jwt_token(user) do
+  defp sign_jwt_token({:ok, user}) do
     JsonWebToken.sign(
       %{user_id: user.id, exp: Timex.shift(Date.today, days: 7)},
       %{key: System.get_env("JWT_SECRET")})

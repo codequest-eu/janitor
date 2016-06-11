@@ -4,6 +4,10 @@
 /deps
 /*.ez
 .env
+.mix
+.hex
+.hex/*/**
+.bash_history
 
 # Generate on crash by the VM
 erl_crash.dump
