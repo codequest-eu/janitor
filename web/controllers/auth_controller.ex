@@ -15,7 +15,7 @@ defmodule Janitor.AuthController do
     redirect conn, to: "localhost:5000?token=#{token}"
   end
 
-  defp sign_jwt_token(user) do
+  defp sign_jwt_token({:ok, user}) do
     JsonWebToken.sign(
       %{user_id: user.id, exp: Timex.shift(Date.today, days: 7)},
       %{key: System.get_env("JWT_SECRET")})
