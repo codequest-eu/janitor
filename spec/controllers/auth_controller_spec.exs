@@ -10,6 +10,7 @@ defmodule Janitor.AuthControllerSpec do
   end 
 
   describe "oauth" do 
+    let :jwt_token, do: "some_token"
     subject do: action(:oauth, %{"code" => "some_code"})
 
     before do
@@ -17,11 +18,11 @@ defmodule Janitor.AuthControllerSpec do
       allow(OAuth2.AccessToken).to(accept(:get!, fn (_,_) 
         -> build(:google_plus_user)
       end))
-      allow(JsonWebToken).to accept(:sign, fn (_,_) -> "some_token" end )
+      allow(JsonWebToken).to accept(:sign, fn (_,_) -> jwt_token end )
     end 
 
     it do: should have_http_status(302)
-    it do: should redirect_to "http://localhost:5000?token=some_token"
+    it do: should redirect_to "#{System.get_env("CLIENT_URL")}?token=#{jwt_token}"
   
   end 
 end 
