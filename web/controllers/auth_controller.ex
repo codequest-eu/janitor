@@ -13,7 +13,7 @@ defmodule Janitor.AuthController do
     params = token(code) |> get_user! |> map_params
     changeset = User.registration_changeset(%User{}, params)
     token = find_or_create_by(User, changeset, :google_id) |> sign_jwt_token
-    redirect conn, external: "http://localhost:5000?token=#{token}"
+    redirect conn, external: "#{System.get_env("CLIENT_URL")}?token=#{token}"
   end
 
   defp sign_jwt_token({:ok, user}) do
