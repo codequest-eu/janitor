@@ -1,16 +1,11 @@
 defmodule Janitor.DBHelpersSpec do 
-  import Ecto.Query
   use ESpec.Phoenix, model: Janitor.DBHelpers
   alias Janitor.User
   alias Janitor.DBHelpers
+  import Ecto.Query
+  import Janitor.UserFactory
 
-  let :changeset, do: User.registration_changeset(%User{}, %{
-    first_name: "Mark",
-    last_name: "test", 
-    google_id: "test1234", 
-    email: "test@test.com"
-  })
-
+  let :changeset, do: User.registration_changeset(%User{}, fields_for(:user))
 
   describe ".find_or_create" do 
     context "when user is not in the database" do

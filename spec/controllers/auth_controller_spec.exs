@@ -1,6 +1,6 @@
 defmodule Janitor.AuthControllerSpec do
   alias Janitor.Google
-  import Janitor.Factory
+  import Janitor.UserFactory
   use ESpec.Phoenix, controller: Janitor.AuthController 
 
   describe "connect" do 
