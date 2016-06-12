@@ -1,8 +1,7 @@
 defmodule Janitor.AuthController do
-  import Janitor.DBHelpers
   use Janitor.Web, :controller
   use Timex
-  import DBHelpers
+  import Janitor.DBHelpers
   alias Janitor.User
   alias Janitor.Google
   
