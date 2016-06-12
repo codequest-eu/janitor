@@ -1,4 +1,4 @@
-defmodule Google do
+defmodule Janitor.Google do
   use OAuth2.Strategy
 
   alias OAuth2.Strategy.AuthCode
