@@ -1,18 +1,12 @@
 defmodule Janitor.UserControllerSpec do
   use ESpec.Phoenix, controller: Janitor.UserController
-  alias Janitor.User
+  import Janitor.UserFactory
 
-  describe "show" do
-    let :user, do: %User{id: 1, first_name: "John", last_name: "Doe", email: "john@doe.com"}
+  describe "me" do
+    let :user, do: create(:user)
+    let :custom_conn, do: assign(conn, :current_user, user)
 
-    before do
-      allow Repo |> to accept(:get, fn
-        User, 1 -> user
-        User, id -> passthrough([id])
-      end)
-    end
-
-    subject do: action(:me)
+    subject do:  action(:me, %{}, custom_conn)
 
     it do: should be_successful
     it do: should render_template("me.json")
