@@ -20,11 +20,12 @@ defmodule Janitor.Mixfile do
   def application do
     [mod: {Janitor, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :oauth2, :ex_machina, :timex]]
+                    :phoenix_ecto, :postgrex, :oauth2, :timex,
+                    :ex_machina]]
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
+  defp elixirc_paths(:test), do: ["lib", "web", "spec/support/factories"]
   defp elixirc_paths(_),     do: ["lib", "web"]
 
   # Specifies your project dependencies.
@@ -40,7 +41,7 @@ defmodule Janitor.Mixfile do
      {:cowboy, "~> 1.0"},
      {:oauth2, "~> 0.5"},
      {:espec_phoenix, "~> 0.2.1", only: :test, app: false},
-     {:ex_machina, "~> 1.0.0-beta.1", github: "thoughtbot/ex_machina"},
+     {:ex_machina, "~> 0.6.1", only: :test},
      {:oauth2, "~> 0.5"},
      {:shouldi, "~> 0.3.0", only: :test},
      {:json_web_token, "~> 0.2"},
