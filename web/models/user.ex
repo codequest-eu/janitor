@@ -6,6 +6,9 @@ defmodule Janitor.User do
     field :last_name, :string
     field :email, :string
     field :google_id, :string
+
+    has_many :days, Janitor.Day
+    
     timestamps
   end
 
