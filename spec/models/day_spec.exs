@@ -1,22 +1,19 @@
-defmodule Janitor.UserSpec do 
+defmodule Janitor.DaySpec do 
   import Ecto.Query
-  use ESpec.Phoenix, model: Janitor.User
-  alias Janitor.User
-  alias Janitor.UserFactory
-
-  let :changeset, do: User.registration_changeset(%User{}, 
-    UserFactory.fields_for(:user))
+  use ESpec.Phoenix, model: Janitor.Day
+  alias Janitor.Day
+  import Janitor.DayFactory
 
   describe "validation" do 
     context "valid changeset" do 
+      let :changeset, do: Day.changeset(%Day{}, fields_for(:day))
       it "set valid? to true" do 
         expect(changeset.valid?).to eq true
       end 
     end 
 
     context "invalid changeset" do 
-      let :changeset, do: User.registration_changeset(%User{}, 
-        UserFactory.fields_for(:user, %{email: 'wrong_email'}))
+      let :changeset, do: Day.changeset(%Day{}, fields_for(:invalid_day))
 
       it "sets valid? to false" do 
         expect(changeset.valid?).to eq false
@@ -24,7 +21,7 @@ defmodule Janitor.UserSpec do
 
       it "applies email error message" do 
         changeset.valid?
-        expect(changeset.errors[:email]).to_not eq nil
+        expect(changeset.errors[:date]).to_not eq nil
       end 
     end 
   end 
