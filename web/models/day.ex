@@ -3,7 +3,7 @@ defmodule Janitor.Day do
 
   schema "days" do
     field :working, :boolean
-    field :date, Ecto.DateTime
+    field :date, Ecto.Date
 
     belongs_to :user, Janitor.User
 
