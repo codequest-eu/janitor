@@ -20,8 +20,7 @@ defmodule Janitor.Mixfile do
   def application do
     [mod: {Janitor, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :oauth2, :timex,
-                    :ex_machina]]
+                    :phoenix_ecto, :postgrex, :oauth2, :timex]]
   end
 
   # Specifies which paths to compile per environment.
