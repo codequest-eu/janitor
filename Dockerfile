@@ -8,3 +8,5 @@ WORKDIR $HOME
 
 COPY mix.exs mix.exs
 RUN yes | mix deps.get
+RUN apt-get update
+RUN apt-get -y install erlang-tools
