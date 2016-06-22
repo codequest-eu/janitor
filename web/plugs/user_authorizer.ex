@@ -21,17 +21,12 @@ defmodule Janitor.Plugs.UserAuthorizer do
 
   #PRIVATE
 
-  defp perform_checks({conn, nil}, []), do: end_processing(conn, nil)
+  defp perform_checks({conn, nil}, []), do: conn
   defp perform_checks({conn, nil}, [check_fun | remaining_checks]) do
     perform_checks(check_fun.(conn), remaining_checks)
   end
-  defp perform_checks({conn, err}, _), do: end_processing(conn, err)
-
-  defp end_processing(conn, err) do
-    case err do
-      nil -> conn
-      _ -> conn |> send_resp(403, "Unauthorized request") |> Plug.Conn.halt
-    end
+  defp perform_checks({conn, err}, _) do
+    conn |> send_resp(403, "Unauthorized request") |> Plug.Conn.halt
   end
 
   defp extract_token_claims(conn) do
