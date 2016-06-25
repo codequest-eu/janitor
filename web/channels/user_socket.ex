@@ -2,7 +2,7 @@ defmodule Janitor.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "rooms:*", Janitor.RoomChannel
+  channel "days", Janitor.DaysChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
