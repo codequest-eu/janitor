@@ -5,7 +5,7 @@ defmodule Janitor.UserFactory do
     %Janitor.User{
       first_name: "Mark",
       last_name: "test",
-      google_id: "test1234",
+      google_id: sequence(:google_id, &"test#{&1}"),
       email: sequence(:email, &"test#{&1}@test.com")
     }
   end
