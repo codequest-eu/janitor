@@ -1,13 +1,12 @@
 defmodule Janitor.DaysViewsSpec do
   use ESpec.Phoenix, view: Janitor.DaysView
+  import Janitor.ViewHelpers
   alias Janitor.DayFactory
   alias Janitor.Day
 
   def render_days(days) do 
     days |> Enum.map(
-      fn (day) -> 
-        day |> Map.from_struct |> Map.take([:id, :date, :working, :user_id])
-      end
+      fn (day) -> day |> pick_fields([:id, :date, :working, :user_id]) end
     ) |> Poison.encode! 
   end 
 
@@ -19,7 +18,7 @@ defmodule Janitor.DaysViewsSpec do
       [day1,day2] |> render_days
     end
 
-    subject do: render("days.json", days: [day1, day2])
+    subject do: render(days: [day1, day2])
 
     it do: should eq(days_to_json)
   end
