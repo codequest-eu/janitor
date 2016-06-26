@@ -4,7 +4,7 @@ defmodule Janitor.Repo.Migrations.CreateDaysTable do
   def change do
     create table(:days) do 
       add :working, :boolean, default: true
-      add :date, :datetime
+      add :date, :date
       add :user_id, references(:users)
       timestamps
     end 
