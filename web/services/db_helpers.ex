@@ -9,9 +9,5 @@ defmodule Janitor.DBHelpers do
       _ -> {:ok, entity }
     end
   end 
-
-  defp create(changeset) do 
-    {:ok, entity} = Repo.insert(changeset)
-    entity
-  end 
+ 
 end 
