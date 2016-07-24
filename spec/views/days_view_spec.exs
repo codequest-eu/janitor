@@ -18,7 +18,7 @@ defmodule Janitor.DaysViewsSpec do
       [day1,day2] |> render_days
     end
 
-    subject do: render(days: [day1, day2])
+    subject do: render("days.json", days: [day1, day2])
 
     it do: should eq(days_to_json)
   end

@@ -8,8 +8,6 @@ defmodule Janitor.DaysControllerSpec do
     let! :day3, do: DayFactory.create(:day, date: Ecto.Date.utc())
 
     context "with no params" do 
-      let :days_to_json, do: [day1,day2] |> render_days
-
       subject do: action(:index, %{}, conn)
       it do: should be_successful
       it do: should render_template("days.json")
@@ -17,8 +15,8 @@ defmodule Janitor.DaysControllerSpec do
     end
 
     context "with month param" do 
-      subject do: action(:index, %{month: 2}, conn)
-
+      subject do: action(:index, %{"month" => 2}, conn)
+        
       it do: should have_in_assigns(days: [day1,day2])
     end 
   end    
