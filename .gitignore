@@ -9,6 +9,7 @@
 .mix/**/*
 .hex/**/*
 .bash_history
+.ash_history
 
 # Generate on crash by the VM
 erl_crash.dump

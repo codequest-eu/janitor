@@ -53,6 +53,7 @@ defmodule Janitor.Web do
       import Janitor.Router.Helpers
       import Janitor.ErrorHelpers
       import Janitor.Gettext
+      import Janitor.ViewHelpers
     end
   end
 
