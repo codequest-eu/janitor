@@ -1,11 +1,12 @@
 defmodule Janitor.DaysChannelSpec do 
   @endpoint Janitor.Endpoint
   use Phoenix.ChannelTest
+  import ExUnit.Assertions, only: [assert_receive: 2]
   use Timex
   alias Janitor.DayFactory
   alias Janitor.UserFactory
   alias Janitor.DaysView
-  use ESpec.Phoenix, model: Janitor.DaysCHannel
+  use ESpec.Phoenix, model: Janitor.DaysChannel
 
   let! :day1, do: DayFactory.create(:day, date: %Ecto.Date{day: 1, month: 2, year: 2016})
   let! :day2, do: DayFactory.create(:day, date: %Ecto.Date{day: 2, month: 2, year: 2016})
@@ -25,7 +26,8 @@ defmodule Janitor.DaysChannelSpec do
     it "updates day" do 
       push socket1, "update:day:#{day1.id}", %{token: token, working: true}
       payload = DaysView.render("day.json", day: day1)
-      assert_broadcast "updated:day:#{day1.id}", payload
+      id = day1.id
+      assert_broadcast "updated:day:#{id}", payload
     end 
   end 
 

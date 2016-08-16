@@ -17,8 +17,9 @@ defmodule Janitor.AuthController do
   end
 
   defp sign_jwt_token({:ok, user}) do
+    date =  DateTime.utc_now |> Timex.shift( days: 7)
     JsonWebToken.sign(
-      %{user_id: user.id, exp: Timex.shift(Date.today, days: 7)},
+      %{user_id: user.id, exp: DateTime.to_unix(date)},
       %{key: System.get_env("JWT_SECRET")})
   end
 

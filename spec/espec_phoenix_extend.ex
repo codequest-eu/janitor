@@ -25,6 +25,12 @@ defmodule ESpec.Phoenix.Extend do
     end
   end
 
+  def channel do 
+    quote do
+      alias Janitor.Repo  
+    end
+  end 
+
   defmacro __using__(which) when is_atom(which) do
     apply(__MODULE__, which, [])
   end
