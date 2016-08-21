@@ -34,7 +34,8 @@ defmodule Janitor.Plugs.UserAuthorizer do
       {:ok, claims} ->
         conn = assign(conn, :claims, claims)
         {conn, nil}
-      {:error, _} ->
+      {:error, reason} ->
+        IO.puts(reason)
         {conn, :error}
     end
   end
@@ -42,7 +43,7 @@ defmodule Janitor.Plugs.UserAuthorizer do
   defp check_expiration_time(conn) do
     claims = conn.assigns.claims
     cond do
-      Map.from_struct(DateTime.now) > claims.exp ->
+      DateTime.to_unix(DateTime.utc_now) > claims.exp ->
         {conn, :error}
       true -> {conn, nil}
     end
@@ -63,7 +64,7 @@ defmodule Janitor.Plugs.UserAuthorizer do
   defp parse_and_verify_token(conn) do
     conn
     |> Plug.Conn.get_req_header("authorization")
-    |> List.first |> String.split |> tl |> List.first
+    |> List.first |> String.split |> List.last
     |> JsonWebToken.verify(%{key: System.get_env("JWT_SECRET")})
   end
 end

@@ -44,7 +44,8 @@ defmodule Janitor.Mixfile do
      {:oauth2, "~> 0.5"},
      {:shouldi, "~> 0.3.0", only: :test},
      {:json_web_token, "~> 0.2"},
-     {:timex, "~> 2.1.4"}
+     {:timex, "~> 3.0"},
+     {:cors_plug, "~> 1.1"}
     ]
   end
 

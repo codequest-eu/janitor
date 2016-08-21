@@ -3,6 +3,8 @@ defmodule Janitor.Endpoint do
 
   socket "/socket", Janitor.UserSocket
 
+  plug CORSPlug
+
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest

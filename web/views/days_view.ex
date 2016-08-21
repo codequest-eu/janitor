@@ -7,4 +7,11 @@ defmodule Janitor.DaysView do
     end)
   end
 
+  def render("day.json", %{day: day}) do
+    render_day day
+  end
+
+  defp render_day(day) do 
+    day |> Map.from_struct |> Map.take([:id, :date, :working, :user_id])
+  end 
 end
