@@ -10,9 +10,9 @@ defmodule Janitor.Day do
     timestamps
   end
 
-  def changeset(model, params \\ :empty) do 
+  def changeset(model, params \\ :empty) do
     model
-    |> cast(params, ~w(date), ~w(working user_id))    
-  end 
+    |> cast(params, ~w(date), ~w(working user_id))
+  end
 
 end

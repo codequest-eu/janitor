@@ -1,20 +1,11 @@
-defmodule Janitor.DaysQueryHelpers do 
-  import Ecto.Query 
+defmodule Janitor.DaysQueryHelpers do
+  import Ecto.Query
+  import Janitor.DateManipulation
 
-  def from_month(month \\ Ecto.Date.utc().month) do 
-    {:ok, start_date} = get_start_date(month)
-    {:ok, end_date} = get_end_date(month)
+  def from_month(date \\ Ecto.Date.utc()) do
+    {:ok, start_date} = get_start_date_for_month_in(date)
+    {:ok, end_date} = get_end_date_for_month_in(date)
     from d in Janitor.Day, where: d.date >= ^start_date and d.date <= ^end_date
-  end 
+  end
 
-  defp get_start_date(month) do 
-    current_date = Ecto.Date.utc()
-    Ecto.Date.cast(%{month: month, year: current_date.year, day: 1})
-  end 
-
-  defp get_end_date(month) do 
-    current_date = Ecto.Date.utc()
-    last_day = :calendar.last_day_of_the_month(current_date.year, month)
-    Ecto.Date.cast(%{month: month, year: current_date.year, day: last_day})
-  end 
-end 
+end
