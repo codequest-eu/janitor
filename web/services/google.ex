@@ -23,12 +23,12 @@ defmodule Janitor.Google do
     OAuth2.Client.get_token!(client(), params, headers)
   end
 
-  def authorize_url(client, params) do
-    AuthCode.authorize_url(client, params)
+  def authorize_url(client_object, params) do
+    AuthCode.authorize_url(client_object, params)
   end
 
-  def get_token(client, params, headers) do
-    client
+  def get_token(client_object, params, headers) do
+    client_object
     |> put_header("Accept", "application/json")
     |> AuthCode.get_token(params, headers)
   end

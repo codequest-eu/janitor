@@ -14,5 +14,4 @@ defmodule Janitor.Day do
     model
     |> cast(params, ~w(date), ~w(working user_id))
   end
-
 end

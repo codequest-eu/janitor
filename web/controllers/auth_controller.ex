@@ -10,14 +10,15 @@ defmodule Janitor.AuthController do
   end
 
   def oauth(conn, %{"code" => code}) do
-    params = token(code) |> get_user! |> map_params
+    params = code |> token |> get_user! |> map_params
     changeset = User.registration_changeset(%User{}, params)
-    token = find_or_create_by(User, changeset, :google_id) |> sign_jwt_token
+    user = find_or_create_by(User, changeset, :google_id)
+    token = user |> sign_jwt_token
     redirect conn, external: client_url(token)
   end
 
   defp sign_jwt_token({:ok, user}) do
-    date =  DateTime.utc_now |> Timex.shift( days: 7)
+    date =  DateTime.utc_now |> Timex.shift(days: 7)
     JsonWebToken.sign(
       %{user_id: user.id, exp: DateTime.to_unix(date)},
       %{key: System.get_env("JWT_SECRET")})

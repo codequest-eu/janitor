@@ -42,10 +42,10 @@ defmodule Janitor.Plugs.UserAuthorizer do
 
   defp check_expiration_time(conn) do
     claims = conn.assigns.claims
-    cond do
-      DateTime.to_unix(DateTime.utc_now) > claims.exp ->
-        {conn, :error}
-      true -> {conn, nil}
+    if DateTime.to_unix(DateTime.utc_now) > claims.exp do
+      {conn, :error}
+    else
+      {conn, nil}
     end
   end
 
