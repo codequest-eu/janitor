@@ -29,3 +29,10 @@ erl_crash.dump
 # secrets file as long as you replace its contents by environment
 # variables.
 /config/prod.secret.exs
+
+# Node dependencies
+.npm/
+
+# credo - A static code analysis tool for the Elixir language
+# with a focus on code consistency and teaching
+.credo.exs
