@@ -38,7 +38,7 @@ defmodule Janitor.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:oauth2, "~> 0.5"},
+     {:oauth2, "~> 0.7"},
      {:espec_phoenix, "~> 0.2.1", only: :test, app: false},
      {:ex_machina, "~> 0.6.1", only: :test},
      {:oauth2, "~> 0.5"},
@@ -46,7 +46,8 @@ defmodule Janitor.Mixfile do
      {:json_web_token, "~> 0.2"},
      {:timex, "~> 3.0"},
      {:cors_plug, "~> 1.1"},
-     {:credo, "~> 0.4", only: [:dev, :test]}
+     {:credo, "~> 0.4", only: [:dev, :test]},
+     {:slack, "~> 0.9.1"}
     ]
   end
 
