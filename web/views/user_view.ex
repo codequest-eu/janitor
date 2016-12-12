@@ -1,4 +1,4 @@
-defmodule Janitor.UserView do
+  defmodule Janitor.UserView do
   use Janitor.Web, :view
 
   def render("me.json", %{user: user}) do
