@@ -17,3 +17,4 @@ config :janitor, Janitor.Repo,
   port: System.get_env("JANITOR_DB_1_PORT_5432_TCP_PORT"),
   pool_size: 10,
   pool: Ecto.Adapters.SQL.Sandbox
+
