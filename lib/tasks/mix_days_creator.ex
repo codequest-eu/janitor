@@ -10,7 +10,7 @@ defmodule Mix.Tasks.MixDaysCreator do
         year = (today.year + 1)
         month = 1
       false ->
-        yaer = today.year
+        year = today.year
         month = (today.month + 1)
     end
     date = Ecto.Date.cast!(%{year: year, month: month, day: 1})
