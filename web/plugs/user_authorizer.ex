@@ -2,21 +2,24 @@ defmodule Janitor.Plugs.UserAuthorizer do
   use Timex
   import Plug.Conn
 
-  alias Janitor.User
-  alias Janitor.Repo
+  alias Janitor.{User, Repo}
 
-  def init(_) do
-  end
+  def init(opts), do: opts
 
   def call(conn, _) do
-    perform_checks(
-      {conn, nil},
-      [
-        &extract_token_claims/1,
-        &check_expiration_time/1,
-        &assign_current_user/1
-      ]
-    )
+    case get_req_header(conn, "authorization") do
+      [] ->
+        send_unauthorized_response(conn)
+      _ ->
+        perform_checks(
+          {conn, nil},
+          [
+            &extract_token_claims/1,
+            &check_expiration_time/1,
+            &assign_current_user/1
+          ]
+        )
+    end
   end
 
   #PRIVATE
@@ -25,8 +28,20 @@ defmodule Janitor.Plugs.UserAuthorizer do
   defp perform_checks({conn, nil}, [check_fun | remaining_checks]) do
     perform_checks(check_fun.(conn), remaining_checks)
   end
-  defp perform_checks({conn, err}, _) do
-    conn |> send_resp(403, "Unauthorized request") |> Plug.Conn.halt
+  defp perform_checks({conn, _}, _) do
+    send_unauthorized_response(conn)
+  end
+
+  defp send_unauthorized_response(conn) do
+    defaults = %{errors: "Unauthorized"}
+    {:ok, json_body} =
+      defaults
+      |> Poison.encode
+
+    conn
+    |> put_resp_content_type("application/json")
+    |> send_resp(403, json_body)
+    |> halt
   end
 
   defp extract_token_claims(conn) do
@@ -34,8 +49,7 @@ defmodule Janitor.Plugs.UserAuthorizer do
       {:ok, claims} ->
         conn = assign(conn, :claims, claims)
         {conn, nil}
-      {:error, reason} ->
-        IO.puts(reason)
+      {:error, conn} ->
         {conn, :error}
     end
   end
@@ -52,7 +66,7 @@ defmodule Janitor.Plugs.UserAuthorizer do
   defp assign_current_user(conn) do
     claims = conn.assigns.claims
     try do
-      user = Repo.get!(User, claims.user_id)
+      user = Repo.get(User, claims.user_id)
       conn = assign(conn, :current_user, user)
       {conn, nil}
     rescue

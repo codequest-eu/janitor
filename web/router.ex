@@ -19,6 +19,6 @@ defmodule Janitor.Router do
 
   scope "/api", Janitor do
     pipe_through :api
-    get "/me", UserController, :me
+    get "/me", UserController, :me, as: :me
   end
 end
