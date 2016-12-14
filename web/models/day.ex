@@ -6,6 +6,7 @@ defmodule Janitor.Day do
     field :date, Ecto.Date
 
     belongs_to :user, Janitor.User
+    has_many :tasks, Janitor.Task
 
     timestamps
   end

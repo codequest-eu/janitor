@@ -19,6 +19,14 @@ defmodule Janitor.Router do
 
   scope "/api", Janitor do
     pipe_through :api
+
+    scope "/days" do
+      get "/:day_id/tasks", TaskController, :index
+      post "/:day_id/tasks", TaskController, :create, as: :create_task
+      patch "/:day_id/tasks/:id", TaskController, :update, as: :update_task
+      delete "/:day_id/tasks/:id", TaskController, :destroy, as: :destroy_task
+    end
+
     get "/me", UserController, :me, as: :me
     resources "/days", DaysController, only: [:index, :show]
   end

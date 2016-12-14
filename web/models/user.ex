@@ -9,7 +9,7 @@ defmodule Janitor.User do
     field :avatar, :string
 
     has_many :days, Janitor.Day
-
+    has_many :tasks, Janitor.Task
     timestamps
   end
 
