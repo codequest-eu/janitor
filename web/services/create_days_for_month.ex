@@ -29,7 +29,7 @@ defmodule Janitor.CreateDaysForMonth do
 
   defp is_working(date) do
     day_of_the_week = :calendar.day_of_the_week(Ecto.Date.to_erl(date))
-    Enum.member?([6,7], day_of_the_week)
+    !Enum.member?([6,7], day_of_the_week)
   end
 
   defp create_date(day_number, date) do
