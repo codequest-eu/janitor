@@ -47,6 +47,8 @@ defmodule Janitor.Plugs.UserAuthorizer do
   defp extract_token_claims(conn) do
     case parse_and_verify_token(conn) do
       {:ok, claims} ->
+        IO.inspect "LOOOOL"
+        IO.inspect claims
         conn = assign(conn, :claims, claims)
         {conn, nil}
       {:error, conn} ->
