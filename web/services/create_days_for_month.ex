@@ -6,7 +6,6 @@ defmodule Janitor.CreateDaysForMonth do
   def call(date) do
     {:ok, start_date} = get_start_date_for_month_in(date)
     {:ok, end_date} = get_end_date_for_month_in(date)
-    IO.puts "ENUM: #{Enum.to_list(start_date.day..end_date.day)}"
     create_days(Enum.to_list(start_date.day..end_date.day), date)
   end
 

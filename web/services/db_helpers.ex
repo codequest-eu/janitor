@@ -7,7 +7,9 @@ defmodule Janitor.DBHelpers do
     entity = Repo.get_by(structName, get_by_map)
     case entity do
       nil -> Repo.insert(changeset)
-      _ -> {:ok, entity}
+      _ ->
+        entity = Ecto.Changeset.change(entity, changeset.changes)
+        {:ok, Repo.update!(entity)}
     end
   end
 

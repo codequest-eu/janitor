@@ -1,3 +1,4 @@
+require IEx
 defmodule Janitor.AuthController do
   use Janitor.Web, :controller
   use Timex
@@ -34,9 +35,16 @@ defmodule Janitor.AuthController do
   end
 
   defp map_params(data) do
-    %{body: %{"emails" => [%{"value" => email}], "displayName" => name, "id" => id}} = data
+
+    %{body: %{
+        "emails" => [%{"value" => email}],
+        "displayName" => name,
+        "id" => id,
+        "image" => %{"url" => image_url}
+      }
+    } = data
     [first_name, last_name] = String.split(name)
-    %{email: email, google_id: id, first_name: first_name, last_name: last_name}
+    %{email: email, google_id: id, first_name: first_name, last_name: last_name, avatar: image_url}
   end
 
   defp client_url(token) do

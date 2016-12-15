@@ -4,6 +4,6 @@ defmodule Janitor.UserView do
   def render("me.json", %{user: user}) do
     user
     |> Map.from_struct
-    |> Map.take([:first_name, :last_name, :email, :id])
+    |> Map.take([:first_name, :last_name, :email, :id, :avatar])
   end
 end
