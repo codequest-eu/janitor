@@ -6,7 +6,6 @@ defmodule Janitor.CreateDaysForMonth do
   def call(date) do
     {:ok, start_date} = get_start_date_for_month_in(date)
     {:ok, end_date} = get_end_date_for_month_in(date)
-    IO.puts "ENUM: #{Enum.to_list(start_date.day..end_date.day)}"
     create_days(Enum.to_list(start_date.day..end_date.day), date)
   end
 
@@ -29,7 +28,7 @@ defmodule Janitor.CreateDaysForMonth do
 
   defp is_working(date) do
     day_of_the_week = :calendar.day_of_the_week(Ecto.Date.to_erl(date))
-    Enum.member?([6,7], day_of_the_week)
+    !Enum.member?([6,7], day_of_the_week)
   end
 
   defp create_date(day_number, date) do
