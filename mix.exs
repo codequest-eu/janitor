@@ -39,7 +39,6 @@ defmodule Janitor.Mixfile do
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
      {:oauth2, "~> 0.6.0"},
-     {:poison, "~> 2.1.0"},
      {:espec_phoenix, "~> 0.2.1", only: :test, app: false},
      {:ex_machina, "~> 0.6.1", only: :test},
      {:shouldi, "~> 0.3.0", only: :test},
