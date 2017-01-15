@@ -16,6 +16,7 @@ defmodule Janitor.DaysController do
 
   def index(conn, _) do
     days = Repo.all(from_month())
-    render conn, "days.json", days: days
+    conn
+    |> render "days.json", days: days
   end
 end

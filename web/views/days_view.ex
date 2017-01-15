@@ -1,11 +1,22 @@
 defmodule Janitor.DaysView do
   use Janitor.Web, :view
 
+  @day_fields [:id, :date, :working, :user_id]
+
   def render("days.json", %{days: days}) do
     Enum.map(days, fn (day) ->
       day
-        |> pick_fields([:id, :date, :working, :user_id])
+        |> pick_fields(@day_fields)
         |> Map.put(:user, render_user(day))
+    end)
+  end
+
+  def render("days_with_tasks.json", %{days: days}) do
+    Enum.map(days, fn (day) ->
+      day
+        |> pick_fields(@day_fields)
+        |> Map.put(:user, render_user(day))
+        |> Map.put(:tasks, Janitor.TaskView.render("index.json", %{tasks: day.tasks}))
     end)
   end
 
@@ -16,7 +27,7 @@ defmodule Janitor.DaysView do
   defp render_day(day) do
     day
       |> Map.from_struct
-      |> Map.take([:id, :date, :working, :user_id])
+      |> Map.take(@day_fields)
       |> Map.put(:user, render_user(day))
   end
 

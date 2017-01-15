@@ -27,7 +27,12 @@ defmodule Janitor.Router do
       delete "/:day_id/tasks/:id", TaskController, :destroy, as: :destroy_task
     end
 
+    scope "/users", Users do
+      get "/:user_id/days", DaysController, :index
+    end
+
     get "/me", UserController, :me, as: :me
     resources "/days", DaysController, only: [:index, :show]
+
   end
 end

@@ -4,6 +4,7 @@ defmodule Janitor.Task do
   schema "tasks" do
     field :content, :string
     field :done, :boolean
+    field :default, :boolean
 
     belongs_to :user, Janitor.User, foreign_key: :user_id
     belongs_to :day, Janitor.Day, foreign_key: :day_id
@@ -12,6 +13,6 @@ defmodule Janitor.Task do
 
   def changeset(model, params \\ :empty) do
     model
-    |> cast(params, ~w(content day_id), ~w(user_id))
+    |> cast(params, ~w(content day_id default), ~w(user_id))
   end
 end

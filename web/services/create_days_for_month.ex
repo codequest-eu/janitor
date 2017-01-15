@@ -1,12 +1,23 @@
 defmodule Janitor.CreateDaysForMonth do
   alias Janitor.Repo
   alias Janitor.Day
+  alias Janitor.Task
   import Janitor.DateManipulation
+
+  @default_tasks [
+    "Setup that motherfuckn dishwasher",
+    "Clean that motherfuckn table",
+    "Throw that motherfuckn trash",
+    "Clean that motherfuckn coffeemachine",
+    "Put that motherfuckn milk into fridge"
+  ]
 
   def call(date) do
     {:ok, start_date} = get_start_date_for_month_in(date)
     {:ok, end_date} = get_end_date_for_month_in(date)
-    create_days(Enum.to_list(start_date.day..end_date.day), date)
+    Repo.transaction fn ->
+      create_days(Enum.to_list(start_date.day..end_date.day), date)
+    end
   end
 
   #private
@@ -23,7 +34,14 @@ defmodule Janitor.CreateDaysForMonth do
     {:ok, iterated_date} = create_date(day_number, date)
     params = %{date: iterated_date, working: is_working(iterated_date)}
     day = Day.changeset(%Day{}, params)
-    Repo.insert day
+    case Repo.insert day do
+      {:ok, day} ->
+        @default_tasks |> Enum.each(fn(task_text) ->
+          task = Task.changeset(%Task{}, %{day_id: day.id, content: task_text, default: true})
+          Repo.insert(task)
+        end)
+      {:error, _} -> raise "Can't insert day!"
+    end
   end
 
   defp is_working(date) do
