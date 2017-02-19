@@ -16,7 +16,7 @@ defmodule Janitor.DaysView do
       day
         |> pick_fields(@day_fields)
         |> Map.put(:user, render_user(day))
-        |> Map.put(:tasks, Janitor.TaskView.render("index.json", %{tasks: day.tasks}))
+        |> Map.merge(Janitor.TaskView.render("index.json", %{tasks: day.tasks}))
     end)
   end
 

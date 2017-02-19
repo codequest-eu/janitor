@@ -1,6 +1,5 @@
 defmodule Janitor.DBHelpersTest do
-  use Janitor.ModelCase
-  use ExUnit.Case, async: true
+  use ExUnit.Case, async: false
 
   import Janitor.UserFactory
   import Ecto.Query
