@@ -1,6 +1,6 @@
 defmodule Janitor.TaskView do
   use Janitor.Web, :view
-  @task_fields [:id, :content, :day_id, :user_id, :default]
+  @task_fields [:id, :content, :day_id, :user_id, :default, :done]
 
   def render("index.json", %{tasks: tasks}) do
     %{tasks: render_many(tasks, __MODULE__, "task.json", as: :task)}
