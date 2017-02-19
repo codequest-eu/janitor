@@ -4,7 +4,6 @@ defmodule Janitor.DaysChannel do
   alias Janitor.User
   alias Janitor.Day
   alias Janitor.DaysView
-  import Janitor.DaysQueryHelpers
   import Ecto.Query
 
   def join("days", params, socket) do
@@ -24,7 +23,7 @@ defmodule Janitor.DaysChannel do
     end
   end
 
-  defp handle_in("get:days", params, user, socket) do
+  defp handle_in("get:days", _, user, socket) do
     days = Day |> order_by(:date) |> preload(:user) |> Repo.all
     payload = %{
       days: DaysView.render("days.json", days: days),
@@ -33,7 +32,7 @@ defmodule Janitor.DaysChannel do
     {:reply, {:ok, payload}, socket}
   end
 
-  defp handle_in("update:day:" <> day_id, params, user, socket) do
+  defp handle_in("update:day:" <> day_id, params, _, socket) do
     changes = day_changes(day_id, params)
     update_day(changes, socket)
   end

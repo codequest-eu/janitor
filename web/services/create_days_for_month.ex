@@ -26,7 +26,7 @@ defmodule Janitor.CreateDaysForMonth do
     create_day(head, date)
     create_days(tail, date)
   end
-  defp create_days([], date) do
+  defp create_days([], _) do
     IO.puts "I na tym zakończymy!"
   end
 

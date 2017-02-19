@@ -1,7 +1,7 @@
 defmodule Janitor.TaskController do
   use Janitor.Web, :controller
 
-  alias Janitor.{Task, Repo, Day}
+  alias Janitor.{Task, Repo}
 
   def index(conn, %{"day_id" => day_id}) do
     tasks = Repo.all(from task in Task, where: task.day_id == ^day_id)

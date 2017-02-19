@@ -5,18 +5,17 @@ defmodule Janitor.DaysController do
   alias Janitor.Day
 
   def index(conn, %{"month" => month}) do
-    days = Repo.all(from_month(month))
+    days = month |> from_month |> Repo.all
     render conn, "days.json", days: days
-  end
-
-  def show(conn, %{"id" => id}) do
-    day = Repo.get(Day, id) |> Repo.preload(:user)
-    render conn, "day.json", day: day
   end
 
   def index(conn, _) do
     days = Repo.all(from_month())
-    conn
-    |> render "days.json", days: days
+    conn |> render("days.json", days: days)
+  end
+
+  def show(conn, %{"id" => id}) do
+    day = Day |> Repo.get(id) |> Repo.preload(:user)
+    render conn, "day.json", day: day
   end
 end
