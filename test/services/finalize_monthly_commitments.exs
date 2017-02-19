@@ -6,7 +6,9 @@ defmodule Janitor.FinalizeMonthlyCommitments do
 
   alias Janitor.{User, Repo}
 
-
+  setup do 
+    
+  end 
   test ""
 
 end
