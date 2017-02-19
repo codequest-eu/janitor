@@ -7,6 +7,7 @@ defmodule Janitor.User do
     field :email, :string
     field :google_id, :string
     field :avatar, :string
+    field :points, :integer
 
     has_many :days, Janitor.Day
     has_many :tasks, Janitor.Task

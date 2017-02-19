@@ -13,6 +13,6 @@ defmodule Janitor.Task do
 
   def changeset(model, params \\ :empty) do
     model
-    |> cast(params, ~w(content day_id), ~w(user_id default))
+    |> cast(params, ~w(content day_id), ~w(user_id default done))
   end
 end
